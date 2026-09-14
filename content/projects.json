@@ -1,0 +1,367 @@
+{
+  "name": "Xin(Robynn)Shen",
+  "categories": [
+    {
+      "id": "creative",
+      "en": "Creative projects",
+      "zh": "商业与创意",
+      "projects": [
+        {
+          "id": "ballerine",
+          "sourceFolder": "Creative_Ballerine Jewelry",
+          "client": "BALLERINE JEWELRY × HAUTE MAGAZINE",
+          "title": {
+            "en": "Ballerine Jewelry × Haute Magazine",
+            "zh": "Ballerine Jewelry × Haute Magazine"
+          },
+          "date": {
+            "en": "March 2026",
+            "zh": "2026 年 3 月"
+          },
+          "discipline": {
+            "en": "Creative concept & photography",
+            "zh": "创意设计与摄影"
+          },
+          "description": {
+            "en": "A brand collaboration between Los Angeles jewelry label Ballerine Jewelry and USC’s Haute Magazine. Creative concept and photography for an editorial series featuring the brand’s expressive, statement-driven pieces.",
+            "zh": "洛杉矶独立珠宝品牌 Ballerine Jewelry 与 USC 校园杂志 Haute Magazine 的品牌合作拍摄。负责创意设计与摄影，以人像呈现珠宝鲜明而富有表现力的风格。"
+          },
+          "role": {
+            "en": "Creative concept · Photography",
+            "zh": "创意设计 · 摄影"
+          },
+          "rows": [
+            [
+              "assets/ballerine/image-04.webp",
+              "assets/ballerine/image-05.webp"
+            ],
+            [
+              "assets/ballerine/image-01.webp",
+              "assets/ballerine/image-02.webp",
+              "assets/ballerine/image-03.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/ballerine/video-01.mp4",
+              "poster": "assets/ballerine/video-01.webp",
+              "title": {
+                "en": "Behind the scenes",
+                "zh": "拍摄幕后"
+              }
+            }
+          ],
+          "portrait": true
+        },
+        {
+          "id": "mileslab",
+          "sourceFolder": "Creative_Mileslab x Huwa Jersey",
+          "client": "MILESLAB × SHANGHAI HUWA",
+          "title": {
+            "en": "MILESLAB × Shanghai HUWA",
+            "zh": "MILESLAB × Shanghai HUWA"
+          },
+          "date": {
+            "en": "August 2026",
+            "zh": "2026 年 8 月"
+          },
+          "discipline": {
+            "en": "Product photography & visual design",
+            "zh": "产品摄影与视觉设计"
+          },
+          "description": {
+            "en": "Product photography and visual materials for Shanghai HUWA’s official mixed-division tournament apparel at WUCC 2026. MILESLAB’s custom team gear was designed around the players, their identity and the demands of competition.",
+            "zh": "为上海 HUWA 队参加 2026 世界飞盘俱乐部锦标赛（WUCC）制作混合组官方队服的产品摄影与视觉物料，展示 MILESLAB 围绕队伍身份与竞技需求打造的定制装备。"
+          },
+          "role": {
+            "en": "Official product photography · Visual materials design",
+            "zh": "官方产品摄影 · 物料视觉设计"
+          },
+          "rows": [
+            [
+              "assets/mileslab/image-01.webp",
+              "assets/mileslab/image-02.webp",
+              "assets/mileslab/image-03.webp"
+            ]
+          ],
+          "extraRows": [
+            [
+              "assets/mileslab/image-04.webp",
+              "assets/mileslab/image-05.webp",
+              "assets/mileslab/image-06.webp"
+            ]
+          ]
+        },
+        {
+          "id": "samsung",
+          "sourceFolder": "Creative_小红书小美说 x 三星",
+          "client": "XIAOHONGSHU × SAMSUNG GALAXY",
+          "title": {
+            "en": "Xiaomeishuo × Samsung Galaxy",
+            "zh": "小红书「小美说」× 三星 Galaxy"
+          },
+          "date": {
+            "en": "August 2025",
+            "zh": "2025 年 8 月"
+          },
+          "discipline": {
+            "en": "Commercial film production",
+            "zh": "商业短片制片"
+          },
+          "description": {
+            "en": "Two branded films for Xiaohongshu’s Xiaomeishuo and the Samsung Galaxy Flip/Fold series, featuring Nana Ouyang and Wallace Chung. Supported the production from early planning and on-set coordination through post-production delivery.",
+            "zh": "小红书「小美说」与三星 Galaxy Flip/Fold 系列的商业短片合作，由欧阳娜娜、钟汉良出镜，共落地两支品牌广告片。参与前期策划、现场协调与后期交付。"
+          },
+          "role": {
+            "en": "Production assistant · Schedule & budget coordination · Social copy, image selection & subtitle review",
+            "zh": "制片助理 · 拍摄进度与预算整理 · 现场协调 · 社媒文案、选图与字幕审核"
+          },
+          "metrics": {
+            "en": "100K+ views per film · 10K+ total likes & interactions",
+            "zh": "单支内容播放量 10 万+ · 总点赞互动量 1 万+"
+          },
+          "rows": [
+            [
+              "assets/samsung/image-01.webp",
+              "assets/samsung/image-03.webp"
+            ],
+            [
+              "assets/samsung/image-02.webp",
+              "assets/samsung/image-04.webp"
+            ]
+          ],
+          "extraRows": [
+            [
+              "assets/samsung/image-05.webp",
+              "assets/samsung/image-06.webp"
+            ],
+            [
+              "assets/samsung/image-07.webp",
+              "assets/samsung/image-08.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/samsung/video-01.mp4",
+              "poster": "assets/samsung/video-01.webp",
+              "title": {
+                "en": "Wallace Chung · Kashgar",
+                "zh": "钟汉良 · 喀什"
+              }
+            },
+            {
+              "src": "assets/samsung/video-02.mp4",
+              "poster": "assets/samsung/video-02.webp",
+              "title": {
+                "en": "Nana Ouyang · Hong Kong",
+                "zh": "欧阳娜娜 · 香港"
+              }
+            }
+          ]
+        },
+        {
+          "id": "needflea",
+          "sourceFolder": "Creative_Needflea ",
+          "client": "NEED! FLEA",
+          "title": {
+            "en": "NEED! FLEA",
+            "zh": "NEED! FLEA 创意市集"
+          },
+          "date": {
+            "en": "August 2024",
+            "zh": "2024 年 8 月"
+          },
+          "discipline": {
+            "en": "Social content & event photography",
+            "zh": "社媒内容与现场摄影"
+          },
+          "description": {
+            "en": "Social storytelling for a creative market bringing together vintage fashion, independent design, art and music. Independently produced short-form videos, from street-style interviews to music recommendations, and photographed vendors and visitors on site.",
+            "zh": "为聚集古着、独立设计、艺术与音乐的创意市集策划社媒内容，围绕穿搭采访、音乐推荐与现场氛围制作短视频，并记录品牌摊位与观众互动。"
+          },
+          "role": {
+            "en": "Topics & scripts · Filming & editing · Cover design · Official event photography",
+            "zh": "独立完成选题、脚本、拍摄、剪辑与封面制作 · 官方现场摄影"
+          },
+          "metrics": {
+            "en": "10+ videos · 100K+ total views · 2K+ average likes · 30+ images",
+            "zh": "10+ 条视频 · 总浏览量 10 万+ · 平均点赞 2K+ · 30+ 张图文素材"
+          },
+          "rows": [
+            [
+              "assets/needflea/image-01.webp",
+              "assets/needflea/image-02.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/needflea/video-01.mp4",
+              "poster": "assets/needflea/video-01.webp",
+              "title": {
+                "en": "NEED! TV · Music interview 1",
+                "zh": "NEED! TV · 音乐采访 1"
+              }
+            },
+            {
+              "src": "assets/needflea/video-02.mp4",
+              "poster": "assets/needflea/video-02.webp",
+              "title": {
+                "en": "NEED! TV · Music interview 2",
+                "zh": "NEED! TV · 音乐采访 2"
+              }
+            },
+            {
+              "src": "assets/needflea/video-03.mp4",
+              "poster": "assets/needflea/video-03.webp",
+              "title": {
+                "en": "NEED! TV · Music interview 3",
+                "zh": "NEED! TV · 音乐采访 3"
+              }
+            }
+          ],
+          "portrait": true
+        }
+      ]
+    },
+    {
+      "id": "interactive",
+      "en": "Interactive work",
+      "zh": "互动作品",
+      "projects": [
+        {
+          "id": "night-matters",
+          "sourceFolder": "Vibecoding_Night Matters",
+          "client": "NIGHT MATTERS",
+          "title": {
+            "en": "Night Matters",
+            "zh": "Night Matters"
+          },
+          "date": {
+            "en": "May 2026",
+            "zh": "2026 年 5 月"
+          },
+          "discipline": {
+            "en": "Interactive archive",
+            "zh": "互动档案"
+          },
+          "description": {
+            "en": "A cross-media archive of contemporary night culture in Asian cities. Underground clubs, electronic music and youth subcultures come together through an interactive website, visual stories and club artifacts—tracing how nightlife shapes identity and community.",
+            "zh": "围绕亚洲城市当代夜间文化展开的跨媒介档案。通过互动网站、视觉叙事与俱乐部实物，记录地下俱乐部、电子音乐与青年亚文化，探索夜生活如何塑造身份与社群。"
+          },
+          "role": {
+            "en": "Project creator · Concept & website development",
+            "zh": "项目创作者 · 概念与网站开发"
+          },
+          "url": "https://xinshen-robynn.github.io/iml300/CareWorkVersion2/HomePage.html",
+          "demo": {
+            "src": "assets/night-matters/video-01.mp4",
+            "poster": "assets/night-matters/video-01.webp",
+            "title": {
+              "en": "Night Matters walkthrough",
+              "zh": "Night Matters 操作演示"
+            }
+          }
+        },
+        {
+          "id": "eraser",
+          "sourceFolder": "Vibecoding_The Life of an Eraser",
+          "client": "THE LIFE OF AN ERASER",
+          "title": {
+            "en": "The Life of an Eraser",
+            "zh": "The Life of an Eraser"
+          },
+          "date": {
+            "en": "April 2026",
+            "zh": "2026 年 4 月"
+          },
+          "discipline": {
+            "en": "Browser-based hypernarrative",
+            "zh": "浏览器交互叙事"
+          },
+          "description": {
+            "en": "Follow a small pink eraser through a digital notebook. Shifting colors, layouts and fragments of text create a nonlinear story about memory, perfectionism and letting go—a reflection on how we continually edit ourselves online.",
+            "zh": "跟随一块粉色小橡皮，穿行于数字笔记本的不同页面。变化的色彩、布局与文字片段构成非线性故事，在记忆、完美主义与放手之间，映照我们不断编辑线上自我的过程。"
+          },
+          "role": {
+            "en": "Project creator · Narrative & website development",
+            "zh": "项目创作者 · 叙事与网站开发"
+          },
+          "url": "https://xinshen-robynn.github.io/iml300/HyperNarrative/Page1.html",
+          "demo": {
+            "src": "assets/eraser/video-01.mp4",
+            "poster": "assets/eraser/video-01.webp",
+            "title": {
+              "en": "The Life of an Eraser walkthrough",
+              "zh": "The Life of an Eraser 操作演示"
+            }
+          }
+        },
+        {
+          "id": "dj-mixer",
+          "sourceFolder": "Vibecoding_DJ Panel Halftone Mixer",
+          "client": "DJ PANEL HALFTONE MIXER",
+          "title": {
+            "en": "DJ Panel Halftone Mixer",
+            "zh": "DJ Panel Halftone Mixer"
+          },
+          "date": {
+            "en": "March 2026",
+            "zh": "2026 年 3 月"
+          },
+          "discipline": {
+            "en": "Interactive audiovisual design",
+            "zh": "声音与视觉交互"
+          },
+          "description": {
+            "en": "A playful mixing desk that turns sound into texture. Moving a red circle across the control panel changes low EQ and resonance while a halftone pattern shifts in scale and density, letting you “scratch” between sound and image.",
+            "zh": "一个把声音变成纹理的互动调音台。在面板内移动红色圆点，改变低频均衡与共振，同时让半色调图案的大小与密度发生变化，在声音与图像之间进行“搓碟”。"
+          },
+          "role": {
+            "en": "Project creator · Interaction design & creative coding",
+            "zh": "项目创作者 · 交互设计与创意编程"
+          },
+          "url": "https://editor.p5js.org/xinshen/sketches/1HopXRJGm",
+          "demo": {
+            "src": "assets/dj-mixer/video-01.mp4",
+            "poster": "assets/dj-mixer/video-01.webp",
+            "title": {
+              "en": "DJ Panel Halftone Mixer walkthrough",
+              "zh": "DJ Panel Halftone Mixer 操作演示"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "photography",
+      "en": "Photography",
+      "zh": "摄影",
+      "sourceFolders": [
+        "Photography",
+        "photograph"
+      ],
+      "projects": []
+    },
+    {
+      "id": "poster",
+      "en": "Posters",
+      "zh": "海报",
+      "sourceFolders": [
+        "Poster",
+        "poster"
+      ],
+      "projects": []
+    },
+    {
+      "id": "vr",
+      "en": "VR",
+      "zh": "虚拟现实",
+      "sourceFolders": [
+        "Visual Reality",
+        "VR",
+        "vr"
+      ],
+      "projects": []
+    }
+  ]
+}
