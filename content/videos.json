@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ballerine",
+    "index": 1,
+    "src": "assets/ballerine/video-01.mp4",
+    "poster": "assets/ballerine/video-01.webp",
+    "original": "Ballerine Jewerly_BTS.mp4"
+  },
+  {
+    "id": "needflea",
+    "index": 1,
+    "src": "assets/needflea/video-01.mp4",
+    "poster": "assets/needflea/video-01.webp",
+    "original": "NEED_OFFICIAL-NEED!_TV___你在听什么分享宝-20260914181941-20260914181945.mp4"
+  },
+  {
+    "id": "needflea",
+    "index": 2,
+    "src": "assets/needflea/video-02.mp4",
+    "poster": "assets/needflea/video-02.webp",
+    "original": "NEED_OFFICIAL-NEED!_TV___你在听什么分享宝-20260914182010-20260914182011.mp4"
+  },
+  {
+    "id": "needflea",
+    "index": 3,
+    "src": "assets/needflea/video-03.mp4",
+    "poster": "assets/needflea/video-03.webp",
+    "original": "NEED_OFFICIAL-NEED!_TV___你在听什么分享宝-20260914182013-20260914182014.mp4"
+  },
+  {
+    "id": "samsung",
+    "index": 1,
+    "src": "assets/samsung/video-01.mp4",
+    "poster": "assets/samsung/video-01.webp",
+    "original": "小美说-跟随钟汉良的脚步，走进喀什的野性瞬间-20260914161833-20260914161835.mp4"
+  },
+  {
+    "id": "samsung",
+    "index": 2,
+    "src": "assets/samsung/video-02.mp4",
+    "poster": "assets/samsung/video-02.webp",
+    "original": "小美说-香港的街角小美，就藏在欧阳娜娜的镜头里-20260914161817-20260914161823.mp4"
+  },
+  {
+    "id": "night-matters",
+    "index": 1,
+    "src": "assets/night-matters/video-01.mp4",
+    "poster": "assets/night-matters/video-01.webp",
+    "original": "Night Matters_Demo.mp4"
+  },
+  {
+    "id": "eraser",
+    "index": 1,
+    "src": "assets/eraser/video-01.mp4",
+    "poster": "assets/eraser/video-01.webp",
+    "original": "The Life of an Eraser_Demo.mp4"
+  },
+  {
+    "id": "dj-mixer",
+    "index": 1,
+    "src": "assets/dj-mixer/video-01.mp4",
+    "poster": "assets/dj-mixer/video-01.webp",
+    "original": "DJ Panel Halftone Mixer_Demo.mov"
+  }
+]
