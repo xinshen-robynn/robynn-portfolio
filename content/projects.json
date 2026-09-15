@@ -27,8 +27,8 @@
             "zh": "洛杉矶独立珠宝品牌 Ballerine Jewelry 与 USC 校园杂志 Haute Magazine 的品牌合作拍摄。负责创意设计与摄影，以人像呈现珠宝鲜明而富有表现力的风格。"
           },
           "role": {
-            "en": "Creative concept · Photography",
-            "zh": "创意设计 · 摄影"
+            "en": "Creative Director / Photographer",
+            "zh": "创意指导 / 摄影师"
           },
           "rows": [
             [
@@ -51,7 +51,8 @@
               }
             }
           ],
-          "portrait": true
+          "portrait": true,
+          "section": "creative-direction"
         },
         {
           "id": "mileslab",
@@ -74,8 +75,8 @@
             "zh": "为上海 HUWA 队参加 2026 世界飞盘俱乐部锦标赛（WUCC）制作混合组官方队服的产品摄影与视觉物料，展示 MILESLAB 围绕队伍身份与竞技需求打造的定制装备。"
           },
           "role": {
-            "en": "Official product photography · Visual materials design",
-            "zh": "官方产品摄影 · 物料视觉设计"
+            "en": "Photographer / Visual Designer",
+            "zh": "摄影师 / 视觉设计师"
           },
           "rows": [
             [
@@ -90,7 +91,8 @@
               "assets/mileslab/image-05.webp",
               "assets/mileslab/image-06.webp"
             ]
-          ]
+          ],
+          "section": "creative-direction"
         },
         {
           "id": "samsung",
@@ -113,8 +115,8 @@
             "zh": "小红书「小美说」与三星 Galaxy Flip/Fold 系列的商业短片合作，由欧阳娜娜、钟汉良出镜，共落地两支品牌广告片。参与前期策划、现场协调与后期交付。"
           },
           "role": {
-            "en": "Production assistant · Schedule & budget coordination · Social copy, image selection & subtitle review",
-            "zh": "制片助理 · 拍摄进度与预算整理 · 现场协调 · 社媒文案、选图与字幕审核"
+            "en": "Production Assistant",
+            "zh": "制片助理"
           },
           "metrics": {
             "en": "100K+ views per film · 10K+ total likes & interactions",
@@ -157,7 +159,8 @@
                 "zh": "欧阳娜娜 · 香港"
               }
             }
-          ]
+          ],
+          "section": "production"
         },
         {
           "id": "needflea",
@@ -180,8 +183,8 @@
             "zh": "为聚集古着、独立设计、艺术与音乐的创意市集策划社媒内容，围绕穿搭采访、音乐推荐与现场氛围制作短视频，并记录品牌摊位与观众互动。"
           },
           "role": {
-            "en": "Topics & scripts · Filming & editing · Cover design · Official event photography",
-            "zh": "独立完成选题、脚本、拍摄、剪辑与封面制作 · 官方现场摄影"
+            "en": "Content Creator / Photographer",
+            "zh": "内容创作者 / 摄影师"
           },
           "metrics": {
             "en": "10+ videos · 100K+ total views · 2K+ average likes · 30+ images",
@@ -219,7 +222,8 @@
               }
             }
           ],
-          "portrait": true
+          "portrait": true,
+          "section": "production"
         }
       ]
     },
@@ -249,8 +253,8 @@
             "zh": "围绕亚洲城市当代夜间文化展开的跨媒介档案。通过互动网站、视觉叙事与俱乐部实物，记录地下俱乐部、电子音乐与青年亚文化，探索夜生活如何塑造身份与社群。"
           },
           "role": {
-            "en": "Project creator · Concept & website development",
-            "zh": "项目创作者 · 概念与网站开发"
+            "en": "Creator / Developer",
+            "zh": "创作者 / 开发者"
           },
           "url": "https://xinshen-robynn.github.io/iml300/CareWorkVersion2/HomePage.html",
           "demo": {
@@ -260,7 +264,8 @@
               "en": "Night Matters walkthrough",
               "zh": "Night Matters 操作演示"
             }
-          }
+          },
+          "section": "vibecoding"
         },
         {
           "id": "eraser",
@@ -283,8 +288,8 @@
             "zh": "跟随一块粉色小橡皮，穿行于数字笔记本的不同页面。变化的色彩、布局与文字片段构成非线性故事，在记忆、完美主义与放手之间，映照我们不断编辑线上自我的过程。"
           },
           "role": {
-            "en": "Project creator · Narrative & website development",
-            "zh": "项目创作者 · 叙事与网站开发"
+            "en": "Creator / Developer",
+            "zh": "创作者 / 开发者"
           },
           "url": "https://xinshen-robynn.github.io/iml300/HyperNarrative/Page1.html",
           "demo": {
@@ -294,7 +299,8 @@
               "en": "The Life of an Eraser walkthrough",
               "zh": "The Life of an Eraser 操作演示"
             }
-          }
+          },
+          "section": "vibecoding"
         },
         {
           "id": "dj-mixer",
@@ -317,8 +323,8 @@
             "zh": "一个把声音变成纹理的互动调音台。在面板内移动红色圆点，改变低频均衡与共振，同时让半色调图案的大小与密度发生变化，在声音与图像之间进行“搓碟”。"
           },
           "role": {
-            "en": "Project creator · Interaction design & creative coding",
-            "zh": "项目创作者 · 交互设计与创意编程"
+            "en": "Interaction Designer / Creative Coder",
+            "zh": "交互设计师 / 创意编程"
           },
           "url": "https://editor.p5js.org/xinshen/sketches/1HopXRJGm",
           "demo": {
@@ -328,7 +334,8 @@
               "en": "DJ Panel Halftone Mixer walkthrough",
               "zh": "DJ Panel Halftone Mixer 操作演示"
             }
-          }
+          },
+          "section": "vibecoding"
         }
       ]
     },
@@ -363,5 +370,28 @@
       ],
       "projects": []
     }
-  ]
+  ],
+  "pages": {
+    "homeImage": "assets/pages/home.webp",
+    "portrait": "assets/pages/portrait.webp",
+    "tagline": "To unfold a polyhedron",
+    "bio": {
+      "en": "I’m Xin (Robynn) Shen. My practice moves between creative direction, photography and interactive experiences. From fashion imagery and cultural storytelling to experiments with sound and the browser, I explore how images, narratives and participation can shape one another. This portfolio brings together different facets of that practice.",
+      "zh": "我是 Xin (Robynn) Shen。我的创作横跨创意指导、摄影与互动体验，从时尚影像、文化叙事，到声音与浏览器中的互动实验，探索图像、故事与参与方式如何彼此影响。这份作品集呈现了我创作实践中的不同切面。"
+    },
+    "links": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/robynns7/"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/xinshen2026"
+      },
+      {
+        "label": "Gmail",
+        "url": "mailto:xinshen.robynn@gmail.com"
+      }
+    ]
+  }
 }
