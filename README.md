@@ -40,3 +40,7 @@ The site uses independent static HTML pages. The fixed sidebar exposes Creative,
 At normal desktop sizes, project text and media share one viewport. Short screens and text enlargement allow the text column to scroll for accessibility. On mobile, the sidebar becomes a sticky menu and the content stacks vertically to keep reading and controls comfortable.
 
 The original page photographs are in the supplied `PageAsset` folder. Optimized website copies omit the originals' metadata. The About biography is a draft based only on the work already provided.
+
+## Fourth edition: full-background home
+
+The home photograph fills the entire canvas beside the sidebar. White text sits above the image, and only the home page is locked to the viewport. The mobile navigation overlays the home canvas when opened. All category, About and project-page scrolling behavior remains unchanged.
