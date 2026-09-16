@@ -1,6 +1,15 @@
 {
   "title": {"en": "Project title", "zh": "项目名称"},
   "date": {"en": "2026", "zh": "2026 年"},
+  "section": "photography",
   "description": {"en": "A short project introduction.", "zh": "简短的项目介绍。"},
-  "role": {"en": "Your contribution", "zh": "你的职责"}
+  "role": {"en": "Your role", "zh": "你的角色"},
+  "cover": "assets/project-id/cover-example.webp",
+  "gallery": [
+    "assets/project-id/image-example-01.webp",
+    "assets/project-id/image-example-02.webp"
+  ],
+  "links": [
+    {"label": {"en": "Visit project", "zh": "访问项目"}, "url": "https://example.com"}
+  ]
 }

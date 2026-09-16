@@ -1,5 +1,11 @@
 # Xin(Robynn)Shen — Portfolio
 
+## Local Portfolio Manager
+
+For everyday project updates, double-click [`manager/start.command`](manager/start.command) in Finder. The local Manager can edit existing projects, add projects, organize cover, gallery images and videos, rebuild the portfolio, and open a local preview. It does not commit, push, or deploy anything.
+
+The source of truth remains `content/projects.json`. Generated pages are rebuilt into `dist/` through the existing scripts. See [`manager/README.md`](manager/README.md) for the editing flow.
+
 A bilingual, static portfolio. No special motion and no third-party font or JavaScript dependencies. All displayed project text comes from the supplied descriptions, edited and translated for the web.
 
 ## Content

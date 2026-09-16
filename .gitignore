@@ -4,3 +4,5 @@ outputs/
 .DS_Store
 __pycache__/
 *.pyc
+.portfolio-manager-venv/
+.portfolio-manager-runtime/
