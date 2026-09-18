@@ -224,6 +224,51 @@
           ],
           "portrait": true,
           "section": "production"
+        },
+        {
+          "id": "hometown-visualizer",
+          "sourceFolder": "Creative_Jeremy Zucker's \"Hometown\" Test visualizer",
+          "client": "JEREMY ZUCKER — HOMETOWN",
+          "title": {
+            "en": "Jeremy Zucker “Hometown” Test Visualizer",
+            "zh": "Jeremy Zucker《Hometown》测试视觉片"
+          },
+          "date": {
+            "en": "June 2026",
+            "zh": "2026 年 6 月"
+          },
+          "discipline": {
+            "en": "Music visualizer direction & editing",
+            "zh": "音乐视觉片导演与剪辑"
+          },
+          "description": {
+            "en": "A test visualizer created for Jeremy Zucker’s original song “Hometown,” designed as a social-first visual expression of the track. The project brings direction and editing together to translate the music into a concise moving-image piece.",
+            "zh": "为 Jeremy Zucker 原创歌曲《Hometown》拍摄并剪辑的测试视觉片，用于社交媒体传播。通过导演与剪辑，将歌曲转化为简洁而完整的动态视觉表达。"
+          },
+          "role": {
+            "en": "Creative Director / Director / Editor",
+            "zh": "创意 / 导演 / 剪辑"
+          },
+          "rows": [
+            [
+              "assets/hometown-visualizer/image-01.webp",
+              "assets/hometown-visualizer/image-02.webp",
+              "assets/hometown-visualizer/image-03.webp",
+              "assets/hometown-visualizer/image-04.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/hometown-visualizer/video-01.mp4",
+              "poster": "assets/hometown-visualizer/video-01.webp",
+              "title": {
+                "en": "Hometown test visualizer",
+                "zh": "Hometown 测试视觉片"
+              }
+            }
+          ],
+          "section": "creative-direction",
+          "galleryLayout": "grid-4"
         }
       ]
     },
@@ -336,6 +381,47 @@
             }
           },
           "section": "vibecoding"
+        },
+        {
+          "id": "pokemon-card-mr-experience",
+          "sourceFolder": "Visual Reality",
+          "client": "POKÉMON CARD MIXED REALITY EXPERIENCE",
+          "title": {
+            "en": "Pokémon Card Mixed Reality Experience",
+            "zh": "宝可梦卡牌混合现实体验"
+          },
+          "date": {
+            "en": "August 2026",
+            "zh": "2026 年 8 月"
+          },
+          "discipline": {
+            "en": "Mixed reality game",
+            "zh": "混合现实游戏"
+          },
+          "description": {
+            "en": "A Unity-based mixed reality game built with image tracking for Quest 3. The experience recognizes ten physical Pokémon cards in real time and brings their characters and interactions into the player’s surroundings.",
+            "zh": "一款通过 Image Tracking 技术搭建的 Unity 混合现实游戏。在 Quest 3 中实时识别 10 张实体宝可梦卡牌，让卡牌角色与互动进入玩家所在的现实空间。"
+          },
+          "role": {
+            "en": "Creator / Card Designer / System Developer",
+            "zh": "创作者 / 卡牌定制 / 系统搭建"
+          },
+          "rows": [
+            [
+              "assets/pokemon-card-mr-experience/image-01.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/pokemon-card-mr-experience/video-01.mp4",
+              "poster": "assets/pokemon-card-mr-experience/video-01.webp",
+              "title": {
+                "en": "Pokémon card tracking demo",
+                "zh": "宝可梦卡牌追踪演示"
+              }
+            }
+          ],
+          "section": "mixed-reality"
         }
       ]
     },
@@ -347,7 +433,164 @@
         "Photography",
         "photograph"
       ],
-      "projects": []
+      "projects": [
+        {
+          "id": "photography-live-event",
+          "title": {
+            "en": "Live Event",
+            "zh": "Live Event"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Photography series",
+            "zh": "摄影系列"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Photographer",
+            "zh": "摄影师"
+          },
+          "cover": "assets/photography/live-event/image-01.webp",
+          "gallery": [
+            "assets/photography/live-event/image-01.webp",
+            "assets/photography/live-event/image-02.webp",
+            "assets/photography/live-event/image-03.webp",
+            "assets/photography/live-event/image-04.webp"
+          ],
+          "section": "photography"
+        },
+        {
+          "id": "photography-madness",
+          "title": {
+            "en": "Madness",
+            "zh": "Madness"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Photography series",
+            "zh": "摄影系列"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Photographer",
+            "zh": "摄影师"
+          },
+          "cover": "assets/photography/madness/image-01.webp",
+          "gallery": [
+            "assets/photography/madness/image-01.webp",
+            "assets/photography/madness/image-02.webp",
+            "assets/photography/madness/image-03.webp",
+            "assets/photography/madness/image-04.webp"
+          ],
+          "section": "photography",
+          "slideshowMode": "single"
+        },
+        {
+          "id": "photography-soaked",
+          "title": {
+            "en": "Soaked",
+            "zh": "Soaked"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Photography series",
+            "zh": "摄影系列"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Photographer",
+            "zh": "摄影师"
+          },
+          "cover": "assets/photography/soaked/image-01.webp",
+          "gallery": [
+            "assets/photography/soaked/image-01.webp",
+            "assets/photography/soaked/image-02.webp",
+            "assets/photography/soaked/image-03.webp"
+          ],
+          "section": "photography"
+        },
+        {
+          "id": "photography-superbloom",
+          "title": {
+            "en": "SuperBloom",
+            "zh": "SuperBloom"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Photography series",
+            "zh": "摄影系列"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Photographer",
+            "zh": "摄影师"
+          },
+          "cover": "assets/photography/superbloom/image-01.webp",
+          "gallery": [
+            "assets/photography/superbloom/image-01.webp",
+            "assets/photography/superbloom/image-02.webp",
+            "assets/photography/superbloom/image-03.webp",
+            "assets/photography/superbloom/image-04.webp",
+            "assets/photography/superbloom/image-05.webp"
+          ],
+          "section": "photography"
+        },
+        {
+          "id": "photography-the-dust-remembers",
+          "title": {
+            "en": "The Dust Remembers",
+            "zh": "The Dust Remembers"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Photography series",
+            "zh": "摄影系列"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Photographer",
+            "zh": "摄影师"
+          },
+          "cover": "assets/photography/the-dust-remembers/image-01.webp",
+          "gallery": [
+            "assets/photography/the-dust-remembers/image-01.webp",
+            "assets/photography/the-dust-remembers/image-02.webp",
+            "assets/photography/the-dust-remembers/image-03.webp",
+            "assets/photography/the-dust-remembers/image-04.webp"
+          ],
+          "section": "photography"
+        }
+      ]
     },
     {
       "id": "poster",
@@ -357,7 +600,316 @@
         "Poster",
         "poster"
       ],
-      "projects": []
+      "projects": [
+        {
+          "id": "poster-01",
+          "title": {
+            "en": "Floated",
+            "zh": "Floated"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-01.webp",
+          "gallery": [
+            "assets/poster/poster-01.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-02",
+          "title": {
+            "en": "Jordan Ward",
+            "zh": "Jordan Ward"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-02.webp",
+          "gallery": [
+            "assets/poster/poster-02.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-03",
+          "title": {
+            "en": "Love Me",
+            "zh": "Love Me"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-03.webp",
+          "gallery": [
+            "assets/poster/poster-03.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-04",
+          "title": {
+            "en": "Parcels",
+            "zh": "Parcels"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-04.webp",
+          "gallery": [
+            "assets/poster/poster-04.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-05",
+          "title": {
+            "en": "Sunday Service",
+            "zh": "Sunday Service"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-05.webp",
+          "gallery": [
+            "assets/poster/poster-05.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-06",
+          "title": {
+            "en": "Tyler the creator",
+            "zh": "Tyler the creator"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-06.webp",
+          "gallery": [
+            "assets/poster/poster-06.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-07",
+          "title": {
+            "en": "USC Flea Market Event",
+            "zh": "USC Flea Market Event"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-07.webp",
+          "gallery": [
+            "assets/poster/poster-07.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-08",
+          "title": {
+            "en": "USC White Day Party",
+            "zh": "USC White Day Party"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-08.webp",
+          "gallery": [
+            "assets/poster/poster-08.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-09",
+          "title": {
+            "en": "天堂鸟1",
+            "zh": "天堂鸟1"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-09.webp",
+          "gallery": [
+            "assets/poster/poster-09.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-10",
+          "title": {
+            "en": "天堂鸟2",
+            "zh": "天堂鸟2"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-10.webp",
+          "gallery": [
+            "assets/poster/poster-10.webp"
+          ],
+          "section": "poster"
+        },
+        {
+          "id": "poster-11",
+          "title": {
+            "en": "天堂鸟3",
+            "zh": "天堂鸟3"
+          },
+          "date": {
+            "en": "",
+            "zh": ""
+          },
+          "discipline": {
+            "en": "Poster design",
+            "zh": "海报设计"
+          },
+          "description": {
+            "en": "",
+            "zh": ""
+          },
+          "role": {
+            "en": "Designer",
+            "zh": "设计师"
+          },
+          "cover": "assets/poster/poster-11.webp",
+          "gallery": [
+            "assets/poster/poster-11.webp"
+          ],
+          "section": "poster"
+        }
+      ]
     },
     {
       "id": "vr",
@@ -391,6 +943,86 @@
       {
         "label": "Gmail",
         "url": "mailto:xinshen.robynn@gmail.com"
+      }
+    ],
+    "posterImages": [
+      "assets/poster/poster-01.webp",
+      "assets/poster/poster-02.webp",
+      "assets/poster/poster-03.webp",
+      "assets/poster/poster-04.webp",
+      "assets/poster/poster-05.webp",
+      "assets/poster/poster-06.webp",
+      "assets/poster/poster-07.webp",
+      "assets/poster/poster-08.webp",
+      "assets/poster/poster-09.webp",
+      "assets/poster/poster-10.webp",
+      "assets/poster/poster-11.webp"
+    ],
+    "photographyGroups": [
+      {
+        "id": "live-event",
+        "title": {
+          "en": "Live Event",
+          "zh": "Live Event"
+        },
+        "images": [
+          "assets/photography/live-event/image-01.webp",
+          "assets/photography/live-event/image-02.webp",
+          "assets/photography/live-event/image-03.webp",
+          "assets/photography/live-event/image-04.webp"
+        ]
+      },
+      {
+        "id": "madness",
+        "title": {
+          "en": "Madness",
+          "zh": "Madness"
+        },
+        "images": [
+          "assets/photography/madness/image-01.webp",
+          "assets/photography/madness/image-02.webp",
+          "assets/photography/madness/image-03.webp",
+          "assets/photography/madness/image-04.webp"
+        ]
+      },
+      {
+        "id": "soaked",
+        "title": {
+          "en": "Soaked",
+          "zh": "Soaked"
+        },
+        "images": [
+          "assets/photography/soaked/image-01.webp",
+          "assets/photography/soaked/image-02.webp",
+          "assets/photography/soaked/image-03.webp"
+        ]
+      },
+      {
+        "id": "superbloom",
+        "title": {
+          "en": "SuperBloom",
+          "zh": "SuperBloom"
+        },
+        "images": [
+          "assets/photography/superbloom/image-01.webp",
+          "assets/photography/superbloom/image-02.webp",
+          "assets/photography/superbloom/image-03.webp",
+          "assets/photography/superbloom/image-04.webp",
+          "assets/photography/superbloom/image-05.webp"
+        ]
+      },
+      {
+        "id": "the-dust-remembers",
+        "title": {
+          "en": "The Dust Remembers",
+          "zh": "The Dust Remembers"
+        },
+        "images": [
+          "assets/photography/the-dust-remembers/image-01.webp",
+          "assets/photography/the-dust-remembers/image-02.webp",
+          "assets/photography/the-dust-remembers/image-03.webp",
+          "assets/photography/the-dust-remembers/image-04.webp"
+        ]
       }
     ]
   }

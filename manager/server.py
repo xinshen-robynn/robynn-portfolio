@@ -461,10 +461,13 @@ def save_project_api():
         title["en"] = title["en"].strip() or title["zh"].strip()
         title["zh"] = title["zh"].strip() or title["en"]
 
-        year = validate_year(payload.get("year"))
+        year_raw = str(payload.get("year", "")).strip()
         month = str(payload.get("month", "")).strip()
-        if not re.fullmatch(r"(?:[1-9]|1[0-2])", month):
-            raise ValueError("Please choose a month.")
+        if bool(year_raw) != bool(month):
+            raise ValueError("Please enter both a year and a month, or leave both blank.")
+        year = validate_year(year_raw) if year_raw else ""
+        if month and not re.fullmatch(r"(?:[1-9]|1[0-2])", month):
+            raise ValueError("Please choose a valid month.")
         section = str(payload.get("section", ""))
         if section not in SECTION_LOOKUP:
             raise ValueError("Please choose a valid category.")
@@ -536,7 +539,7 @@ def save_project_api():
         project["id"] = project_id
         project["title"] = title
         if is_new or year != previous_year or month != previous_month:
-            project["date"] = formatted_date(year, month)
+            project["date"] = formatted_date(year, month) if year and month else {"en": "", "zh": ""}
         project["section"] = section
         project["description"] = description
         project["links"] = links
@@ -617,7 +620,7 @@ def build_api():
             for category in read_projects().get("categories", [])
             if isinstance(category, dict)
             for project in category.get("projects", [])
-            if isinstance(project, dict) and project.get("id")
+            if isinstance(project, dict) and project.get("id") and project.get("section") not in {"photography", "poster"}
         }
         for page_path in DIST_DIR.glob("project-*.html"):
             if page_path.name not in valid_project_pages:
