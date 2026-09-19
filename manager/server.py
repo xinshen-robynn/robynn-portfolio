@@ -42,6 +42,7 @@ ALLOWED_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 ALLOWED_VIDEO_EXTENSIONS = {".mp4", ".mov", ".webm"}
 
 SECTIONS = [
+    {"value": "social-media-curation", "parent": "creative", "en": "Social Media Curation", "zh": "社交媒体策划"},
     {"value": "creative-direction", "parent": "creative", "en": "Creative Direction", "zh": "创意指导"},
     {"value": "production", "parent": "creative", "en": "Production", "zh": "制作"},
     {"value": "vibecoding", "parent": "interactive", "en": "Vibecoding", "zh": "氛围编程"},

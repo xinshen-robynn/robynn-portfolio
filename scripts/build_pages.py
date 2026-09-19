@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def build_pages(data=None):
     if data is None:data=json.loads((ROOT/'content/projects.json').read_text())
     template=(ROOT/'templates/page.html').read_text()
-    pages={'home':'Selected Work','about':'About','creative':'Creative','creative-direction':'Creative Direction','production':'Production','interactive':'Interactive','vibecoding':'Vibecoding','mixed-reality':'Mixed Reality','stills':'Stills','photography':'Photography','poster':'Poster'}
+    pages={'home':'Selected Work','about':'About','creative':'Creative','creative-direction':'Creative Direction','production':'Production','social-media-curation':'Social Media Curation','interactive':'Interactive','vibecoding':'Vibecoding','mixed-reality':'Mixed Reality','stills':'Stills','photography':'Photography','poster':'Poster'}
     for c in data['categories']:
         for p in c['projects']:
             if p.get('section') not in {'photography','poster'}:pages['project-'+p['id']]=p['title']['en']

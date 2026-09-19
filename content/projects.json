@@ -223,7 +223,7 @@
             }
           ],
           "portrait": true,
-          "section": "production"
+          "section": "social-media-curation"
         },
         {
           "id": "hometown-visualizer",
@@ -269,6 +269,146 @@
           ],
           "section": "creative-direction",
           "galleryLayout": "grid-4"
+        },
+        {
+          "id": "personal-bilibili",
+          "sourceFolder": "Creative_Personal Bilibili Account",
+          "title": {
+            "en": "Personal Bilibili Account",
+            "zh": "Bilibili 个人账号"
+          },
+          "role": {
+            "en": "Content Creator",
+            "zh": "内容创作者"
+          },
+          "date": {
+            "en": "Present",
+            "zh": "至今"
+          },
+          "description": {
+            "en": "An independently produced Bilibili channel combining cover songs and vlogs. Work spans topic planning, scripts, recording, filming, editing and cover design, with a consistent visual identity.",
+            "zh": "围绕翻唱与 Vlog 双线内容进行选题策划、脚本撰写与更新规划，独立完成录音、拍摄剪辑和封面设计，保持账号视觉风格统一。"
+          },
+          "discipline": {
+            "en": "Social Media Curation",
+            "zh": "社交媒体策划"
+          },
+          "section": "social-media-curation",
+          "rows": [
+            [
+              "assets/personal-bilibili/image-01.webp"
+            ]
+          ],
+          "videos": [],
+          "links": [
+            {
+              "label": {
+                "en": "View Bilibili Account",
+                "zh": "查看 Bilibili 账号"
+              },
+              "url": "https://space.bilibili.com/16496824"
+            }
+          ],
+          "metrics": {
+            "en": "79K+ followers · 5.9M+ total views · 4.6M+ views on a single video · 65% average audience retention",
+            "zh": "79K+ 粉丝 · 累计播放 590 万+ · 单条最高播放 460 万+ · 平均观众留存率 65%"
+          }
+        },
+        {
+          "id": "roll-studio-rednote",
+          "sourceFolder": "Creative_Roll Studio RedNote",
+          "title": {
+            "en": "Roll Studio RedNote",
+            "zh": "Roll Studio 小红书账号"
+          },
+          "role": {
+            "en": "Social Media Manager",
+            "zh": "社交媒体运营"
+          },
+          "date": {
+            "en": "Present",
+            "zh": "至今"
+          },
+          "description": {
+            "en": "Social media curation for Roll Studio: copywriting, visual editing and retouching, client coordination with brands including L’Oréal and Huawei, and post scheduling aligned with campaign timelines.",
+            "zh": "负责 Roll Studio 社交媒体内容运营，包括文案撰写、视觉素材编辑与修图，与欧莱雅、华为等客户协调，并根据项目推广节奏安排内容发布。"
+          },
+          "discipline": {
+            "en": "Social Media Curation",
+            "zh": "社交媒体策划"
+          },
+          "section": "social-media-curation",
+          "rows": [
+            [
+              "assets/roll-studio-rednote/image-01.webp"
+            ],
+            [
+              "assets/roll-studio-rednote/image-02.webp"
+            ]
+          ],
+          "videos": [],
+          "links": [
+            {
+              "label": {
+                "en": "View RedNote Account",
+                "zh": "查看小红书账号"
+              },
+              "url": "https://www.xiaohongshu.com/user/profile/58dcaca26a6a695115a0b75a"
+            }
+          ]
+        },
+        {
+          "id": "loose-end",
+          "sourceFolder": "Creative_\"Loose End\" Music Video",
+          "title": {
+            "en": "“Loose End” Music Video",
+            "zh": "“Loose End” 音乐录像"
+          },
+          "role": {
+            "en": "Producer",
+            "zh": "制片人"
+          },
+          "date": {
+            "en": "May 2025",
+            "zh": "2025 年 5 月"
+          },
+          "description": {
+            "en": "A music video for Tommy Zee’s Better Me EP, following a bittersweet story of young love and lingering memories. Production work covered planning, shoot scheduling, on-set coordination, post-production delivery and promotional materials.",
+            "zh": "为 Tommy Zee 的 Better Me EP 拍摄音乐录像，以年轻恋人的相遇与分别讲述难以放下的回忆。参与前期策划、拍摄排期、现场制片协调、后期交付及宣传素材整理。"
+          },
+          "discipline": {
+            "en": "Production",
+            "zh": "制作"
+          },
+          "section": "production",
+          "rows": [
+            [
+              "assets/loose-end/image-01.webp"
+            ],
+            [
+              "assets/loose-end/image-02.webp"
+            ],
+            [
+              "assets/loose-end/image-03.webp"
+            ],
+            [
+              "assets/loose-end/image-04.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/loose-end/video-01.mp4",
+              "poster": "assets/loose-end/image-01.webp",
+              "title": {
+                "en": "“Loose End” Music Video",
+                "zh": "“Loose End” 音乐录像"
+              }
+            }
+          ],
+          "metrics": {
+            "en": "Best Editing & Honorable Mention (Music Video) — IndieX Film Fest, July 2025",
+            "zh": "最佳剪辑及音乐录像荣誉奖 — IndieX Film Fest，2025 年 7 月"
+          }
         }
       ]
     },
