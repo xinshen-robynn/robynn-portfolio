@@ -21,6 +21,7 @@
 
   <main class="manager-layout">
     <aside class="project-sidebar">
+      <button type="button" class="new-project" id="siteSettingsButton">Website &amp; category settings / 网站与分类</button>
       <button type="button" class="new-project" id="newProjectButton">＋ New Project</button>
       <div id="projectList" class="project-list" aria-label="Existing projects"></div>
       <p class="sidebar-note">Changes stay on this Mac. Saving does not commit, push, or deploy.</p>
@@ -38,6 +39,7 @@
         </div>
       </div>
 
+      <div id="settingsEditor" hidden></div>
       <form id="projectForm" novalidate>
         <input type="hidden" id="projectId">
         <section class="form-section">
@@ -73,12 +75,12 @@
           </div>
         </section>
 
-        <section class="form-section media-section">
+        <section class="form-section"><h3>Role, date &amp; credits / 角色、日期与成果</h3><div class="two-column"><label>Role / 角色 — English<textarea id="roleEn" rows="2"></textarea></label><label>Role / 角色 — 中文<textarea id="roleZh" rows="2"></textarea></label></div><div class="two-column"><label>Discipline / 工作内容 — English<textarea id="disciplineEn" rows="2"></textarea></label><label>Discipline / 工作内容 — 中文<textarea id="disciplineZh" rows="2"></textarea></label></div><div class="two-column"><label>Results & awards / 成果与奖项 — English<textarea id="metricsEn" rows="2"></textarea></label><label>Results & awards / 成果与奖项 — 中文<textarea id="metricsZh" rows="2"></textarea></label></div><div class="two-column"><label>Display date / 日期文字（可写至今） — English<textarea id="dateEn" rows="2"></textarea></label><label>Display date / 日期文字（可写至今） — 中文<textarea id="dateZh" rows="2"></textarea></label></div></section><section class="form-section media-section">
           <div class="section-heading">
             <div><h3>Cover image</h3><p>Choose one image shown on the project listing.</p></div>
             <label class="file-button">Choose cover<input id="coverInput" type="file" accept="image/jpeg,image/png,image/webp"></label>
           </div>
-          <div id="coverPreview" class="cover-preview empty"><span>No cover selected</span></div>
+          <label>Or select an existing image / 从已有图片选择<select id="coverPath"></select></label><div id="coverPreview" class="cover-preview empty"><span>No cover selected</span></div>
         </section>
 
         <section class="form-section media-section">
@@ -86,6 +88,7 @@
             <div><h3>Gallery images</h3><p>Drag images or use the arrow buttons to change their order.</p></div>
             <label class="file-button">Add images<input id="galleryInput" type="file" multiple accept="image/jpeg,image/png,image/webp"></label>
           </div>
+          <label>已有图片<select id="galleryExisting"></select></label><button type="button" class="button secondary" id="addExistingImage">加入图库</button>
           <div id="galleryList" class="gallery-list"></div>
         </section>
 

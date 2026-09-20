@@ -19,3 +19,9 @@ Keep the Terminal window open while using the Manager. Close that window or pres
 The Manager does not run Git commands and does not publish the site.
 
 Uploaded MP4, MOV, and WebM files are converted to browser-ready MP4 files. A poster image is generated automatically. Reordering or removing a video changes the project record but does not delete an existing media file from disk.
+
+## Website and category settings
+
+Use **Website & category settings / 网站与分类** to edit the bilingual navigation and interface labels, category names, category-card role captions and covers, Home background/tagline, About portrait/bio and contact links. Category IDs remain fixed so existing links keep working. Image selectors preview an existing asset; the upload control can add a new image.
+
+Project editing also supports role, discipline, results/awards, custom display dates (for example Present / 至今), existing-image covers, gallery selection and video posters. Editing text leaves the original image layout intact. Save creates a content backup; Build Portfolio updates the local pages and changes asset cache versions automatically. Neither action commits, pushes or publishes.

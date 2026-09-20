@@ -214,6 +214,7 @@ def normalized_project(parent: str, project: dict) -> dict:
         "month": month_for(project),
         "section": section,
         "description": localized(project.get("description")),
+        **{key: localized(project.get(key)) for key in ("role", "discipline", "metrics", "date")},
         "cover": cover_for(project),
         "gallery": flatten_legacy_gallery(project),
         "videos": videos_for(project),
@@ -436,6 +437,65 @@ def projects_api():
     return jsonify({"projects": projects, "sections": SECTIONS, "previewUrl": portfolio_preview_url()})
 
 
+def editable_settings(data):
+    return {"site": data["site"], "categoryCards": data["categoryCards"],
+            "pages": {k: v for k, v in data["pages"].items() if k not in {"posterImages", "photographyGroups"}}}
+
+
+@app.get("/api/settings")
+def settings_api():
+    data = read_projects()
+    assets = sorted(str(p.relative_to(DIST_DIR)) for p in ASSET_DIR.rglob("*") if p.suffix.lower() in ALLOWED_IMAGE_EXTENSIONS)
+    return jsonify({"settings": editable_settings(data), "assets": assets})
+
+
+@app.post("/api/settings")
+def save_settings_api():
+    try:
+        data = read_projects()
+        incoming = request.get_json()
+        def validate(old, new, key=""):
+            if isinstance(old, dict):
+                if not isinstance(new, dict) or set(old) != set(new):
+                    raise ValueError("Settings fields do not match. Reload the Manager.")
+                return {k: validate(v, new[k], k) for k, v in old.items()}
+            if isinstance(old, list):
+                if not isinstance(new, list) or len(old) != len(new):
+                    raise ValueError("Settings list is invalid.")
+                return [validate(a, b, key) for a, b in zip(old, new)]
+            if not isinstance(new, str):
+                raise ValueError("Text values must be strings.")
+            if key == "id" and new != old:
+                raise ValueError("Category identifiers cannot be changed.")
+            if key in {"cover", "homeImage", "portrait"} and new:
+                path = safe_existing_asset(new)
+                if not (DIST_DIR / path).is_file():
+                    raise ValueError("Selected image does not exist.")
+            if key == "url" and new:
+                validate_links([{"url": new}])
+            return new
+        settings = validate(editable_settings(data), incoming)
+        backup_content()
+        data["site"] = settings["site"]
+        data["categoryCards"] = settings["categoryCards"]
+        data["pages"].update(settings["pages"])
+        atomic_write_json(CONTENT_PATH, data)
+        return jsonify({"ok": True})
+    except (ValueError, TypeError) as exc:
+        return jsonify({"error": str(exc)}), 400
+
+
+@app.post("/api/settings/image")
+def settings_image_api():
+    try:
+        upload = request.files.get("image")
+        if not upload:
+            raise ValueError("Choose an image first.")
+        return jsonify({"path": save_uploaded_image(upload, "site-settings", "image")})
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+
+
 @app.get("/portfolio-file/<path:filename>")
 def portfolio_file(filename: str):
     clean = filename.replace("\\", "/")
@@ -464,7 +524,7 @@ def save_project_api():
 
         year_raw = str(payload.get("year", "")).strip()
         month = str(payload.get("month", "")).strip()
-        if bool(year_raw) != bool(month):
+        if "date" not in payload and bool(year_raw) != bool(month):
             raise ValueError("Please enter both a year and a month, or leave both blank.")
         year = validate_year(year_raw) if year_raw else ""
         if month and not re.fullmatch(r"(?:[1-9]|1[0-2])", month):
@@ -492,6 +552,8 @@ def save_project_api():
         cover_upload = request.files.get("cover")
         if cover_upload and cover_upload.filename:
             project["cover"] = save_uploaded_image(cover_upload, project_id, "cover")
+        elif payload.get("coverPath"):
+            project["cover"] = safe_existing_asset(payload["coverPath"])
         elif is_new and not project.get("cover"):
             raise ValueError("A new project needs a cover image.")
 
@@ -533,7 +595,10 @@ def save_project_api():
                     upload = request.files.get(f"video_{key}")
                     if not upload or not upload.filename:
                         raise ValueError("A selected video could not be read.")
-                    new_videos.append(save_uploaded_video(upload, project_id, f"video-{index:02d}", item.get("title")))
+                    video = save_uploaded_video(upload, project_id, f"video-{index:02d}", item.get("title"))
+                    if item.get("poster"):
+                        video["poster"] = safe_existing_asset(item["poster"])
+                    new_videos.append(video)
             project.pop("demo", None)
             project["videos"] = new_videos
 
@@ -541,10 +606,15 @@ def save_project_api():
         project["title"] = title
         if is_new or year != previous_year or month != previous_month:
             project["date"] = formatted_date(year, month) if year and month else {"en": "", "zh": ""}
+        if "date" in payload:
+            project["date"] = localized(payload["date"])
+        for key in ("role", "discipline", "metrics"):
+            if key in payload:
+                project[key] = localized(payload[key])
         project["section"] = section
         project["description"] = description
         project["links"] = links
-        if is_new:
+        if is_new and "discipline" not in payload:
             project["discipline"] = {"en": SECTION_LOOKUP[section]["en"], "zh": SECTION_LOOKUP[section]["zh"]}
 
         backup = backup_content()

@@ -61,6 +61,7 @@ function resetMediaObjectUrls() {
 
 function selectProject(projectId, force = false) {
   if (!force && !askBeforeDiscarding()) return;
+  state.settingsMode=false; el("settingsEditor").hidden=true; form.hidden=false;
   resetMediaObjectUrls();
   const project = state.projects.find((item) => item.id === projectId);
   if (!project) return;
@@ -76,6 +77,8 @@ function selectProject(projectId, force = false) {
   el("year").value = project.year || "";
   el("month").value = project.month || "";
   el("section").value = project.section;
+  ["role","discipline","metrics","date"].forEach(k=>["en","zh"].forEach(l=>el(k+(l==="en"?"En":"Zh")).value=project[k]?.[l]||""));
+  fillAssetSelect(el("coverPath"),project.cover);fillAssetSelect(el("galleryExisting"),"");
   el("descriptionEn").value = project.description.en || "";
   el("descriptionZh").value = project.description.zh || "";
   el("editorMode").textContent = "EDIT PROJECT";
@@ -91,6 +94,7 @@ function selectProject(projectId, force = false) {
 
 function newProject(force = false) {
   if (!force && !askBeforeDiscarding()) return;
+  state.settingsMode=false; el("settingsEditor").hidden=true; form.hidden=false;
   resetMediaObjectUrls();
   state.currentId = null;
   state.coverFile = null;
@@ -98,7 +102,7 @@ function newProject(force = false) {
   state.galleryChanged = false;
   state.videos = [];
   state.videosChanged = false;
-  form.reset();
+  form.reset(); fillAssetSelect(el("coverPath"), "");fillAssetSelect(el("galleryExisting"),"");
   el("projectId").value = "";
   el("section").value = state.sections[0]?.value || "creative-direction";
   el("editorMode").textContent = "NEW PROJECT";
@@ -178,6 +182,8 @@ function renderVideos() {
     const video = card.querySelector("video");
     video.src = videoSource(item);
     if (item.kind === "existing" && item.poster) video.poster = localAssetUrl(item.poster);
+    const posterLabel=document.createElement("label");posterLabel.textContent="Video poster / 视频封面";
+    const posterSelect=document.createElement("select");fillAssetSelect(posterSelect,item.poster);posterSelect.onchange=()=>{item.poster=posterSelect.value;video.poster=localAssetUrl(item.poster);state.videosChanged=true;markDirty()};posterLabel.append(posterSelect);card.querySelector(".video-fields").append(posterLabel);
     const titleEn = card.querySelector('[data-field="videoTitleEn"]');
     const titleZh = card.querySelector('[data-field="videoTitleZh"]');
     titleEn.value = item.title?.en || "";
@@ -226,11 +232,14 @@ function collectLinks() {
 }
 
 async function saveProject() {
+  if(state.settingsMode)return saveSettings();
   if (!form.reportValidity()) return;
   const titleEn = el("titleEn").value.trim(); const titleZh = el("titleZh").value.trim();
   if (!titleEn && !titleZh) { setStatus("Please enter a project title.", "error"); return; }
-  if (!state.currentId && !state.coverFile) { setStatus("Please choose a cover image for the new project.", "error"); return; }
-  const payload = {id: state.currentId, title: {en: titleEn, zh: titleZh}, year: el("year").value.trim(), month: el("month").value, section: el("section").value, description: {en: el("descriptionEn").value.trim(), zh: el("descriptionZh").value.trim()}, links: collectLinks(), galleryChanged: state.galleryChanged, gallery: state.gallery.map((item) => item.kind === "existing" ? {kind: "existing", path: item.path} : {kind: "new", key: item.key}), videosChanged: state.videosChanged, videos: state.videos.map((item) => item.kind === "existing" ? {kind: "existing", src: item.src, poster: item.poster, webm: item.webm, title: item.title} : {kind: "new", key: item.key, title: item.title})};
+  if (!state.currentId && !state.coverFile && !el("coverPath").value) { setStatus("Please choose a cover image for the new project.", "error"); return; }
+  const payload = {id: state.currentId, title: {en: titleEn, zh: titleZh}, year: el("year").value.trim(), month: el("month").value, section: el("section").value, description: {en: el("descriptionEn").value.trim(), zh: el("descriptionZh").value.trim()}, links: collectLinks(), galleryChanged: state.galleryChanged, gallery: state.gallery.map((item) => item.kind === "existing" ? {kind: "existing", path: item.path} : {kind: "new", key: item.key}), videosChanged: state.videosChanged, videos: state.videos.map((item) => item.kind === "existing" ? {kind: "existing", src: item.src, poster: item.poster, webm: item.webm, title: item.title} : {kind: "new", key: item.key, title: item.title, poster:item.poster})};
+  ["role","discipline","metrics","date"].forEach(k=>payload[k]={en:el(k+"En").value,zh:el(k+"Zh").value});
+  payload.coverPath=el("coverPath").value;
   const body = new FormData(); body.append("payload", JSON.stringify(payload));
   if (state.coverFile) body.append("cover", state.coverFile, state.coverFile.name);
   state.gallery.forEach((item) => { if (item.kind === "new") body.append(`gallery_${item.key}`, item.file, item.file.name); });
@@ -277,6 +286,7 @@ async function buildPortfolio() {
 }
 
 async function loadProjects(preferredId = null) {
+  const settingsResponse=await fetch("/api/settings"); const settingsResult=await settingsResponse.json();state.settings=settingsResult.settings;state.assets=settingsResult.assets;
   const response = await fetch("/api/projects"); const result = await response.json();
   state.projects = result.projects; state.sections = result.sections; el("previewButton").href = result.previewUrl; populateSectionSelect();
   const nextId = preferredId || state.currentId || state.projects[0]?.id; if (nextId) selectProject(nextId, true); else newProject(true);
@@ -294,3 +304,39 @@ el("buildButton").addEventListener("click", buildPortfolio);
 el("deleteProjectButton").addEventListener("click", deleteProject);
 window.addEventListener("beforeunload", (event) => { if (!state.dirty) return; event.preventDefault(); event.returnValue = ""; });
 loadProjects().catch((error) => setStatus(error.message, "error"));
+
+function fillAssetSelect(select, selected) {
+  select.replaceChildren();
+  ["",...state.assets||[]].forEach(path=>{const option=document.createElement("option");option.value=path;option.textContent=path||"Choose image / 选择图片";select.append(option)});
+  select.value=selected||"";
+}
+el("coverPath").addEventListener("change",()=>{state.coverFile=null;renderCover(el("coverPath").value);markDirty()});
+el("year").addEventListener("change",syncDate);el("month").addEventListener("change",syncDate);
+function syncDate(){const y=el("year").value,m=Number(el("month").value);if(y&&m){el("dateEn").value=new Date(2000,m-1).toLocaleString("en",{month:"long"})+" "+y;el("dateZh").value=y+" 年 "+m+" 月"}}
+function settingsFields(value, container, prefix="") {
+ Object.entries(value).forEach(([key,v])=>{
+  if(key==="id")return;
+  const names={en:"English",zh:"中文",role:"Role / 角色说明",cover:"Cover / 封面",wordmark:"Name / 网站名称",years:"Years / 年份",portfolio:"Portfolio label / 作品集标签",selectedWork:"Section heading / 栏目标题",photoSeries:"Photography label / 摄影系列标签",photoPlaceholder:"Empty description / 空简介提示",previousPage:"Previous page / 上一页",nextPage:"Next page / 下一页",homeImage:"Home background / 首页背景",portrait:"Portrait / 关于页照片",tagline:"Tagline / 标语",bio:"Biography / 简介",url:"Link address / 链接地址",label:"Link text / 链接文字",groups:"Category names / 分类名称",children:"Subcategories / 子分类",labels:"Interface text / 界面文字",links:"Contact links / 联系方式",home:"Home / 首页",about:"About / 关于",back:"Back / 返回",next:"Next project / 下个项目",previous:"Previous project / 上个项目",menu:"Menu / 菜单",intro:"Introduction / 首页介绍",selected:"Home title / 首页标题",images:"Images / 图片",films:"Films / 视频",empty:"Empty heading / 空栏目标题",emptyText:"Empty description / 空栏目说明",visit:"Project link / 项目链接",skip:"Skip link / 跳转内容",prevMedia:"Previous media / 上一组媒体",nextMedia:"Next media / 下一组媒体",image:"Image / 图片标签",film:"Film / 视频标签"};
+  const name=names[key]||state.sections.find(s=>s.value===key)?.en||key;
+  if(v&&typeof v==="object"){
+   const block=document.createElement("details");block.open=prefix==="";const title=document.createElement("summary");
+   title.textContent=v.id?(state.sections.find(s=>s.value===v.id)?.en||v.en||v.id):({site:"Navigation & interface / 导航及界面文字",categoryCards:"Category cards / 子分类封面与角色",pages:"Home & About / 首页与关于"}[key]||name);block.append(title);settingsFields(v,block,name);container.append(block);return;
+  }
+  const label=document.createElement("label");label.textContent=name;
+  if(["cover","homeImage","portrait"].includes(key)){
+   const select=document.createElement("select");fillAssetSelect(select,v);const image=document.createElement("img");image.className="settings-image";image.src=localAssetUrl(v);
+   select.onchange=()=>{value[key]=select.value;image.src=localAssetUrl(select.value);markDirty()};
+   const upload=document.createElement("input");upload.type="file";upload.accept="image/jpeg,image/png,image/webp";
+   upload.onchange=async()=>{if(!upload.files[0])return;try{const body=new FormData();body.append("image",upload.files[0]);const r=await fetch("/api/settings/image",{method:"POST",headers:{"X-Portfolio-Token":token},body});const result=await r.json();if(!r.ok)throw Error(result.error);state.assets.push(result.path);fillAssetSelect(select,result.path);select.onchange()}catch(e){setStatus(e.message,"error")}};
+   label.append(select,image,upload);
+  }else{const input=document.createElement("textarea");input.rows=String(v).length>100?4:2;input.value=v;input.oninput=()=>{value[key]=input.value;markDirty()};label.append(input)}
+  container.append(label);
+ });
+}
+el("siteSettingsButton").addEventListener("click",async()=>{
+ if(!askBeforeDiscarding())return;
+ const r=await fetch("/api/settings");const result=await r.json();state.settings=result.settings;state.assets=result.assets;state.settingsMode=true;form.hidden=true;el("settingsEditor").hidden=false;el("settingsEditor").replaceChildren();settingsFields(state.settings,el("settingsEditor"));el("editorTitle").textContent="Website & category settings / 网站与分类";el("editorMode").textContent="EDIT WEBSITE";el("deleteProjectButton").hidden=true;clearDirty();
+});
+async function saveSettings(){try{const r=await fetch("/api/settings",{method:"POST",headers:{"Content-Type":"application/json","X-Portfolio-Token":token},body:JSON.stringify(state.settings)});const result=await r.json();if(!r.ok)throw Error(result.error);clearDirty("Saved. Build Portfolio to update the website.")}catch(e){setStatus(e.message,"error")}}
+
+el("addExistingImage").addEventListener("click",()=>{const path=el("galleryExisting").value;if(!path)return;state.gallery.push({kind:"existing",path});state.galleryChanged=true;renderGallery();markDirty()});

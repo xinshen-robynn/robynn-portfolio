@@ -46,3 +46,13 @@ body[data-page=home] .home-intro h1{font-size:clamp(40px,10vw,64px);margin-top:8
 }
 .mobile-parent-link{display:none}
 @media(max-width:760px){.mobile-parent-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:16px;padding:0 14px;border:1px solid #ccc;font-size:13px;text-decoration:none}.mobile-parent-link:hover{border-color:currentColor}}
+.page-heading:has(.mobile-parent-link){position:relative}
+@media(max-width:760px){
+ .sidebar{align-items:center;grid-template-rows:34px auto auto}
+ .wordmark,#menu-toggle{align-self:center;line-height:1.2;margin:0}
+ #menu-toggle{min-height:34px;display:flex;align-items:center}
+ .sidebar nav .nav-groups{margin:24px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+ .page-heading .mobile-parent-link{position:absolute;right:0;top:-7px;min-height:32px;margin:0;padding:5px 10px;font-size:12px;line-height:1.6}
+ .page-heading:has(.mobile-parent-link)>.eyebrow{padding-right:70px;min-height:20px}
+}
+.project-page#ballerine .image-spread img{aspect-ratio:2/3;object-fit:cover}

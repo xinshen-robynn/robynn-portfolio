@@ -28,7 +28,7 @@
           },
           "role": {
             "en": "Creative Director / Photographer",
-            "zh": "创意指导 / 摄影师"
+            "zh": "创意指导 / 摄影"
           },
           "rows": [
             [
@@ -52,7 +52,13 @@
             }
           ],
           "portrait": true,
-          "section": "creative-direction"
+          "section": "creative-direction",
+          "cover": "assets/ballerine/image-04.webp",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         },
         {
           "id": "mileslab",
@@ -75,8 +81,8 @@
             "zh": "为上海 HUWA 队参加 2026 世界飞盘俱乐部锦标赛（WUCC）制作混合组官方队服的产品摄影与视觉物料，展示 MILESLAB 围绕队伍身份与竞技需求打造的定制装备。"
           },
           "role": {
-            "en": "Photographer / Visual Designer",
-            "zh": "摄影师 / 视觉设计师"
+            "en": "Visual Designer / Photographer",
+            "zh": "视觉设计 / 摄影"
           },
           "rows": [
             [
@@ -92,7 +98,13 @@
               "assets/mileslab/image-06.webp"
             ]
           ],
-          "section": "creative-direction"
+          "section": "creative-direction",
+          "cover": "assets/mileslab/image-01.webp",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         },
         {
           "id": "samsung",
@@ -230,8 +242,8 @@
           "sourceFolder": "Creative_Jeremy Zucker's \"Hometown\" Test visualizer",
           "client": "JEREMY ZUCKER — HOMETOWN",
           "title": {
-            "en": "Jeremy Zucker “Hometown” Test Visualizer",
-            "zh": "Jeremy Zucker《Hometown》测试视觉片"
+            "en": "Single “Hometown” Music Visualizer",
+            "zh": "单曲 “Hometown” 视觉短片"
           },
           "date": {
             "en": "June 2026",
@@ -268,7 +280,13 @@
             }
           ],
           "section": "creative-direction",
-          "galleryLayout": "grid-4"
+          "galleryLayout": "grid-4",
+          "cover": "assets/hometown-visualizer/image-01.webp",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         },
         {
           "id": "personal-bilibili",
@@ -326,8 +344,8 @@
             "zh": "社交媒体运营"
           },
           "date": {
-            "en": "Present",
-            "zh": "至今"
+            "en": "July 2025",
+            "zh": "2025 年 7 月"
           },
           "description": {
             "en": "Social media curation for Roll Studio: copywriting, visual editing and retouching, client coordination with brands including L’Oréal and Huawei, and post scheduling aligned with campaign timelines.",
@@ -355,14 +373,19 @@
               },
               "url": "https://www.xiaohongshu.com/user/profile/58dcaca26a6a695115a0b75a"
             }
-          ]
+          ],
+          "cover": "assets/roll-studio-rednote/cover-e190498f91ae.webp",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          }
         },
         {
           "id": "loose-end",
           "sourceFolder": "Creative_\"Loose End\" Music Video",
           "title": {
-            "en": "“Loose End” Music Video",
-            "zh": "“Loose End” 音乐录像"
+            "en": "EP “Loose End” Music Video",
+            "zh": "单曲 “Loose End” 音乐录像"
           },
           "role": {
             "en": "Producer",
@@ -408,7 +431,9 @@
           "metrics": {
             "en": "Best Editing & Honorable Mention (Music Video) — IndieX Film Fest, July 2025",
             "zh": "最佳剪辑及音乐录像荣誉奖 — IndieX Film Fest，2025 年 7 月"
-          }
+          },
+          "cover": "assets/loose-end/image-01.webp",
+          "links": []
         }
       ]
     },
@@ -577,8 +602,8 @@
         {
           "id": "photography-live-event",
           "title": {
-            "en": "Live Event",
-            "zh": "Live Event"
+            "en": "Artist Live Event",
+            "zh": "艺人现场演出"
           },
           "date": {
             "en": "",
@@ -589,8 +614,8 @@
             "zh": "摄影系列"
           },
           "description": {
-            "en": "",
-            "zh": ""
+            "en": "2025 UCLA CSSA Spring Festival Gala, featuring Charlotte Zhang and Benzo Li.",
+            "zh": "2025年UCLA中国学生学者联合会春节晚会 Charlotte Zhang、李大奔现场演出摄影。"
           },
           "role": {
             "en": "Photographer",
@@ -598,12 +623,17 @@
           },
           "cover": "assets/photography/live-event/image-01.webp",
           "gallery": [
-            "assets/photography/live-event/image-01.webp",
-            "assets/photography/live-event/image-02.webp",
             "assets/photography/live-event/image-03.webp",
+            "assets/photography/live-event/image-02.webp",
+            "assets/photography/live-event/image-01.webp",
             "assets/photography/live-event/image-04.webp"
           ],
-          "section": "photography"
+          "section": "photography",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         },
         {
           "id": "photography-madness",
@@ -620,8 +650,8 @@
             "zh": "摄影系列"
           },
           "description": {
-            "en": "",
-            "zh": ""
+            "en": "Published in DESCENT ISSUE #8\nADRENALINE",
+            "zh": "收录于DESCENT ISSUE #8\n ADRENALINE"
           },
           "role": {
             "en": "Photographer",
@@ -629,13 +659,26 @@
           },
           "cover": "assets/photography/madness/image-01.webp",
           "gallery": [
-            "assets/photography/madness/image-01.webp",
-            "assets/photography/madness/image-02.webp",
             "assets/photography/madness/image-03.webp",
+            "assets/photography/madness/image-02.webp",
+            "assets/photography/madness/image-01.webp",
             "assets/photography/madness/image-04.webp"
           ],
           "section": "photography",
-          "slideshowMode": "single"
+          "slideshowMode": "single",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": [
+            {
+              "label": {
+                "en": "Magazine Publishment",
+                "zh": "杂志收录"
+              },
+              "url": "https://issuu.com/descent_usc/docs/issue_8_adrenaline"
+            }
+          ]
         },
         {
           "id": "photography-soaked",
@@ -652,8 +695,8 @@
             "zh": "摄影系列"
           },
           "description": {
-            "en": "",
-            "zh": ""
+            "en": "Published in Haute Magazine FALL 2024\nWINDS OF CHANGE",
+            "zh": "收录于 Haute Magazine FALL 2024\nWINDS OF CHANGE"
           },
           "role": {
             "en": "Photographer",
@@ -665,7 +708,12 @@
             "assets/photography/soaked/image-02.webp",
             "assets/photography/soaked/image-03.webp"
           ],
-          "section": "photography"
+          "section": "photography",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         },
         {
           "id": "photography-superbloom",
@@ -682,8 +730,8 @@
             "zh": "摄影系列"
           },
           "description": {
-            "en": "",
-            "zh": ""
+            "en": "Published in DESCENT ISSUE #9\nSUPERBLOOM",
+            "zh": "收录于DESCENT ISSUE #9\n SUPERBLOOM"
           },
           "role": {
             "en": "Photographer",
@@ -697,7 +745,12 @@
             "assets/photography/superbloom/image-04.webp",
             "assets/photography/superbloom/image-05.webp"
           ],
-          "section": "photography"
+          "section": "photography",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         },
         {
           "id": "photography-the-dust-remembers",
@@ -714,8 +767,8 @@
             "zh": "摄影系列"
           },
           "description": {
-            "en": "",
-            "zh": ""
+            "en": "Published in Haute Magazine SPRING 2025\nTRANSCENDENCE",
+            "zh": "收录于Haute Magazine SPRING 2025\nTRANSCENDENCE"
           },
           "role": {
             "en": "Photographer",
@@ -728,7 +781,12 @@
             "assets/photography/the-dust-remembers/image-03.webp",
             "assets/photography/the-dust-remembers/image-04.webp"
           ],
-          "section": "photography"
+          "section": "photography",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
         }
       ]
     },
@@ -1165,5 +1223,186 @@
         ]
       }
     ]
+  },
+  "site": {
+    "groups": [
+      {
+        "id": "creative",
+        "en": "Creative",
+        "zh": "创意",
+        "children": [
+          {
+            "id": "creative-direction",
+            "en": "Creative Direction",
+            "zh": "创意指导"
+          },
+          {
+            "id": "production",
+            "en": "Production",
+            "zh": "制作"
+          },
+          {
+            "id": "social-media-curation",
+            "en": "Social Media Curation",
+            "zh": "社交媒体策划"
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "en": "Interactive",
+        "zh": "互动",
+        "children": [
+          {
+            "id": "vibecoding",
+            "en": "Vibecoding",
+            "zh": "创意编程"
+          },
+          {
+            "id": "mixed-reality",
+            "en": "Mixed Reality",
+            "zh": "混合现实"
+          }
+        ]
+      },
+      {
+        "id": "stills",
+        "en": "Stills",
+        "zh": "静态影像",
+        "children": [
+          {
+            "id": "photography",
+            "en": "Photography",
+            "zh": "摄影"
+          },
+          {
+            "id": "poster",
+            "en": "Poster",
+            "zh": "海报"
+          }
+        ]
+      }
+    ],
+    "labels": {
+      "en": {
+        "home": "Home",
+        "about": "About",
+        "role": "Role",
+        "images": "Images",
+        "films": "Films",
+        "back": "Back",
+        "next": "Next project",
+        "previous": "Previous project",
+        "visit": "Explore project ",
+        "empty": "Work to come.",
+        "emptyText": "A selection will be added here soon.",
+        "prevMedia": "Previous media",
+        "nextMedia": "Next media",
+        "image": "Image",
+        "film": "Film",
+        "skip": "Skip to content",
+        "menu": "Menu",
+        "intro": "Creative direction, image-making & interactive experiences.",
+        "selected": "Selected work."
+      },
+      "zh": {
+        "home": "首页",
+        "about": "关于",
+        "role": "角色",
+        "images": "照片",
+        "films": "视频",
+        "back": "返回",
+        "next": "下个项目",
+        "previous": "上个项目",
+        "visit": "在线体验 ",
+        "empty": "作品整理中。",
+        "emptyText": "更多作品将在这里呈现。",
+        "prevMedia": "上一组媒体",
+        "nextMedia": "下一组媒体",
+        "image": "图片",
+        "film": "视频",
+        "skip": "跳至内容",
+        "menu": "菜单",
+        "intro": "创意设计、影像与互动体验。",
+        "selected": "精选作品。"
+      }
+    },
+    "wordmark": "Xin(Robynn)Shen",
+    "years": "2024 — 2026",
+    "portfolio": {
+      "en": "Portfolio",
+      "zh": "作品集"
+    },
+    "selectedWork": {
+      "en": "Selected work",
+      "zh": "精选作品"
+    },
+    "photoSeries": {
+      "en": "Photography series",
+      "zh": "摄影系列"
+    },
+    "photoPlaceholder": {
+      "en": "Add a project description in Portfolio Manager.",
+      "zh": "项目简介可在 Portfolio Manager 中添加。"
+    },
+    "previousPage": {
+      "en": "Previous",
+      "zh": "上一页"
+    },
+    "nextPage": {
+      "en": "Next",
+      "zh": "下一页"
+    }
+  },
+  "categoryCards": {
+    "creative-direction": {
+      "role": {
+        "en": "Creative Direction / Visual Design",
+        "zh": "创意策划 / 视觉设计"
+      },
+      "cover": "assets/ballerine/image-04.webp"
+    },
+    "production": {
+      "role": {
+        "en": "Producing",
+        "zh": "制片"
+      },
+      "cover": "assets/samsung/image-01.webp"
+    },
+    "social-media-curation": {
+      "role": {
+        "en": "Content Creation",
+        "zh": "内容创作"
+      },
+      "cover": "assets/needflea/image-01.webp"
+    },
+    "vibecoding": {
+      "role": {
+        "en": "Developer",
+        "zh": "开发者"
+      },
+      "cover": "assets/night-matters/video-01.webp"
+    },
+    "mixed-reality": {
+      "role": {
+        "en": "Developer",
+        "zh": "开发者"
+      },
+      "cover": "assets/pokemon-card-mr-experience/image-01.webp"
+    },
+    "photography": {
+      "role": {
+        "en": "Photographer",
+        "zh": "摄影师"
+      },
+      "cover": "assets/photography/live-event/image-01.webp"
+    },
+    "poster": {
+      "role": {
+        "en": "Designer",
+        "zh": "设计师"
+      },
+      "cover": "assets/poster/poster-01.webp"
+    }
   }
 }
