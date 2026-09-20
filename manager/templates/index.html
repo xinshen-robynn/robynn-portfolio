@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='manager.css') }}">
+</head>
+<body data-token="{{ token }}" data-preview-url="{{ preview_url }}">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">LOCAL ONLY</p>
+      <h1>Portfolio Manager</h1>
+    </div>
+    <div class="top-actions">
+      <button type="button" class="button secondary" id="saveButton">Save</button>
+      <button type="button" class="button primary" id="buildButton">Build Portfolio</button>
+      <a class="button secondary" id="previewButton" href="{{ preview_url }}" target="_blank" rel="noreferrer">Open Local Preview ↗</a>
+    </div>
+  </header>
+
+  <main class="manager-layout">
+    <aside class="project-sidebar">
+      <button type="button" class="new-project" id="siteSettingsButton">Website &amp; category settings / 网站与分类</button>
+      <button type="button" class="new-project" id="newProjectButton">＋ New Project</button>
+      <div id="projectList" class="project-list" aria-label="Existing projects"></div>
+      <p class="sidebar-note">Changes stay on this Mac. Saving does not commit, push, or deploy.</p>
+    </aside>
+
+    <section class="editor">
+      <div class="editor-heading">
+        <div>
+          <p class="eyebrow" id="editorMode">EDIT PROJECT</p>
+          <h2 id="editorTitle">Loading…</h2>
+        </div>
+        <div class="editor-heading-actions">
+          <button type="button" class="delete-project" id="deleteProjectButton">Delete Project</button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div id="settingsEditor" hidden></div>
+      <form id="projectForm" novalidate>
+        <input type="hidden" id="projectId">
+        <section class="form-section">
+          <h3>Project details</h3>
+          <div class="two-column">
+            <label>Title — English<input id="titleEn" type="text" required></label>
+            <label>标题 — 中文<input id="titleZh" type="text"></label>
+          </div>
+          <div class="date-category-row">
+            <div class="date-fields">
+              <label>Year<input id="year" type="text" inputmode="numeric" maxlength="4" placeholder="2026"></label>
+              <label>Month<select id="month">
+                <option value="">Choose month</option>
+                <option value="1">January / 1 月</option>
+                <option value="2">February / 2 月</option>
+                <option value="3">March / 3 月</option>
+                <option value="4">April / 4 月</option>
+                <option value="5">May / 5 月</option>
+                <option value="6">June / 6 月</option>
+                <option value="7">July / 7 月</option>
+                <option value="8">August / 8 月</option>
+                <option value="9">September / 9 月</option>
+                <option value="10">October / 10 月</option>
+                <option value="11">November / 11 月</option>
+                <option value="12">December / 12 月</option>
+              </select></label>
+            </div>
+            <label>Category<select id="section" required></select></label>
+          </div>
+          <div class="two-column">
+            <label>Description — English<textarea id="descriptionEn" rows="7"></textarea></label>
+            <label>项目介绍 — 中文<textarea id="descriptionZh" rows="7"></textarea></label>
+          </div>
+        </section>
+
+        <section class="form-section"><h3>Role, date &amp; credits / 角色、日期与成果</h3><div class="two-column"><label>Role / 角色 — English<textarea id="roleEn" rows="2"></textarea></label><label>Role / 角色 — 中文<textarea id="roleZh" rows="2"></textarea></label></div><div class="two-column"><label>Discipline / 工作内容 — English<textarea id="disciplineEn" rows="2"></textarea></label><label>Discipline / 工作内容 — 中文<textarea id="disciplineZh" rows="2"></textarea></label></div><div class="two-column"><label>Results & awards / 成果与奖项 — English<textarea id="metricsEn" rows="2"></textarea></label><label>Results & awards / 成果与奖项 — 中文<textarea id="metricsZh" rows="2"></textarea></label></div><div class="two-column"><label>Display date / 日期文字（可写至今） — English<textarea id="dateEn" rows="2"></textarea></label><label>Display date / 日期文字（可写至今） — 中文<textarea id="dateZh" rows="2"></textarea></label></div></section><section class="form-section media-section">
+          <div class="section-heading">
+            <div><h3>Cover image</h3><p>Choose one image shown on the project listing.</p></div>
+            <label class="file-button">Choose cover<input id="coverInput" type="file" accept="image/jpeg,image/png,image/webp"></label>
+          </div>
+          <label>Or select an existing image / 从已有图片选择<select id="coverPath"></select></label><div id="coverPreview" class="cover-preview empty"><span>No cover selected</span></div>
+        </section>
+
+        <section class="form-section media-section">
+          <div class="section-heading">
+            <div><h3>Gallery images</h3><p>Drag images or use the arrow buttons to change their order.</p></div>
+            <label class="file-button">Add images<input id="galleryInput" type="file" multiple accept="image/jpeg,image/png,image/webp"></label>
+          </div>
+          <label>已有图片<select id="galleryExisting"></select></label><button type="button" class="button secondary" id="addExistingImage">加入图库</button>
+          <div id="galleryList" class="gallery-list"></div>
+        </section>
+
+        <section class="form-section media-section">
+          <div class="section-heading">
+            <div><h3>Videos</h3><p>Upload MP4, MOV, or WebM. Videos are converted for the website and receive an automatic poster image.</p></div>
+            <label class="file-button">Add videos<input id="videoInput" type="file" multiple accept="video/mp4,video/quicktime,video/webm"></label>
+          </div>
+          <div id="videoList" class="video-list"></div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <div><h3>External links</h3><p>Optional. Add a live project, GitHub page, or another public link.</p></div>
+            <button type="button" class="text-button" id="addLinkButton">＋ Add link</button>
+          </div>
+          <div id="linksList" class="links-list"></div>
+        </section>
+
+        <div class="mobile-actions">
+          <button type="submit" class="button primary">Save Project</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <template id="linkTemplate">
+    <div class="link-row">
+      <input data-field="labelEn" type="text" placeholder="Label in English">
+      <input data-field="labelZh" type="text" placeholder="中文标签">
+      <input data-field="url" type="url" placeholder="https://…">
+      <button type="button" class="icon-button remove-link" aria-label="Remove link">×</button>
+    </div>
+  </template>
+
+  <template id="videoTemplate">
+    <article class="video-card" draggable="true">
+      <div class="video-drag-handle" aria-hidden="true">⋮⋮</div>
+      <video controls playsinline preload="metadata"></video>
+      <div class="video-fields">
+        <label>Video title — English<input data-field="videoTitleEn" type="text"></label>
+        <label>视频标题 — 中文<input data-field="videoTitleZh" type="text"></label>
+      </div>
+      <div class="video-actions">
+        <button type="button" class="icon-button video-up" aria-label="Move video up">↑</button>
+        <button type="button" class="icon-button video-down" aria-label="Move video down">↓</button>
+        <button type="button" class="icon-button video-remove" aria-label="Remove video from project">×</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="{{ url_for('static', filename='manager.js') }}" defer></script>
+</body>
+</html>

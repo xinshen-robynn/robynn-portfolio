@@ -46,6 +46,8 @@ def build(data):
         with Image.open(image_path) as image:
             output['dimensions'][str(image_path.relative_to(ROOT / 'dist'))] = list(image.size)
     target.write_text('window.PORTFOLIO = ' + json.dumps(output, ensure_ascii=False) + ';\n')
+    from build_pages import build_pages
+    build_pages(data)
 
 
 def import_category(category, source):

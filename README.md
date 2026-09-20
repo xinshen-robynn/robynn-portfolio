@@ -1,5 +1,11 @@
 # Xin(Robynn)Shen — Portfolio
 
+## Local Portfolio Manager
+
+For everyday project updates, double-click [`manager/start.command`](manager/start.command) in Finder. The local Manager can edit existing projects, add projects, organize cover, gallery images and videos, rebuild the portfolio, and open a local preview. It does not commit, push, or deploy anything.
+
+The source of truth remains `content/projects.json`. Generated pages are rebuilt into `dist/` through the existing scripts. See [`manager/README.md`](manager/README.md) for the editing flow.
+
 A bilingual, static portfolio. No special motion and no third-party font or JavaScript dependencies. All displayed project text comes from the supplied descriptions, edited and translated for the web.
 
 ## Content
@@ -26,3 +32,21 @@ Serve `dist` with any static HTTP server. Language selection is kept locally in 
 ## Source references
 
 Initial content was transcribed from the seven project introduction PDFs in the supplied asset folder. Project roles and dates follow those documents, including campaign-level metrics for Samsung and Needflea. The reference portfolio is used only for composition and visual direction.
+
+## Third edition: page navigation
+
+The site uses independent static HTML pages. The fixed sidebar exposes Creative, Interactive and Stills, and expands only the current category's subcategories. Each project has its own shareable page, with a persistent description and a right-hand media viewer. Images and films switch in place; arrow controls browse media groups, while previous/next project links navigate between projects in the same subcategory. Project totals are not displayed.
+
+- `templates/page.html`: shared page shell.
+- `scripts/build_pages.py`: generates home, About, category and project HTML pages.
+- `content/projects.json`: includes page imagery, bilingual About copy, social links, and each project's `section`.
+- Recognized project sections: `creative-direction`, `production`, `vibecoding`, `mixed-reality`, `photography`, `poster`.
+- `scripts/update_content.py` also generates HTML pages, including routes for newly imported work. Photography, Poster and VR imports appear under the appropriate Stills or Interactive subcategory. Empty subcategories display a short coming-soon message.
+
+At normal desktop sizes, project text and media share one viewport. Short screens and text enlargement allow the text column to scroll for accessibility. On mobile, the sidebar becomes a sticky menu and the content stacks vertically to keep reading and controls comfortable.
+
+The original page photographs are in the supplied `PageAsset` folder. Optimized website copies omit the originals' metadata. The About biography is a draft based only on the work already provided.
+
+## Fourth edition: full-background home
+
+The home photograph fills the entire canvas beside the sidebar. White text sits above the image, and only the home page is locked to the viewport. The mobile navigation overlays the home canvas when opened. All category, About and project-page scrolling behavior remains unchanged.
