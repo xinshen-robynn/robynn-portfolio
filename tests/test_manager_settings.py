@@ -34,4 +34,15 @@ class ManagerSettingsTests(unittest.TestCase):
   self.assertEqual(saved['rows'],original['rows']);self.assertEqual(saved['date']['en'],'Present');self.assertEqual(saved['role'],p['role'])
  def test_auth_required(self):
   self.assertEqual(self.client.post('/api/settings',json={}).status_code,403)
+ def test_all_photography_dates_roundtrip(self):
+  projects=self.client.get('/api/projects').json['projects']
+  photos=[p for p in projects if p['id'].startswith('photography-')]
+  self.assertTrue(photos)
+  for p in photos:
+   with self.subTest(project=p['id']):
+    p.update(date={'en':'Spring 2025','zh':'2025 年春季'},year='',month='',galleryChanged=False,videosChanged=False)
+    response=self.client.post('/api/projects/save',data={'payload':json.dumps(p)},headers=self.headers)
+    self.assertEqual(response.status_code,200,response.json)
+    saved=next(x for x in self.client.get('/api/projects').json['projects'] if x['id']==p['id'])
+    self.assertEqual(saved['date'],p['date'])
 if __name__=='__main__':unittest.main()

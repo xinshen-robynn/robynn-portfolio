@@ -433,7 +433,8 @@
             "zh": "最佳剪辑及音乐录像荣誉奖 — IndieX Film Fest，2025 年 7 月"
           },
           "cover": "assets/loose-end/image-01.webp",
-          "links": []
+          "links": [],
+          "galleryLayout": "grid-4"
         }
       ]
     },
@@ -464,7 +465,7 @@
           },
           "role": {
             "en": "Creator / Developer",
-            "zh": "创作者 / 开发者"
+            "zh": "开发者"
           },
           "url": "https://xinshen-robynn.github.io/iml300/CareWorkVersion2/HomePage.html",
           "demo": {
@@ -475,7 +476,20 @@
               "zh": "Night Matters 操作演示"
             }
           },
-          "section": "vibecoding"
+          "section": "vibecoding",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": [
+            {
+              "label": {
+                "en": "Open project",
+                "zh": "打开项目"
+              },
+              "url": "https://xinshen-robynn.github.io/iml300/CareWorkVersion2/HomePage.html"
+            }
+          ]
         },
         {
           "id": "eraser",
@@ -499,7 +513,7 @@
           },
           "role": {
             "en": "Creator / Developer",
-            "zh": "创作者 / 开发者"
+            "zh": "开发者"
           },
           "url": "https://xinshen-robynn.github.io/iml300/HyperNarrative/Page1.html",
           "demo": {
@@ -510,7 +524,20 @@
               "zh": "The Life of an Eraser 操作演示"
             }
           },
-          "section": "vibecoding"
+          "section": "vibecoding",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": [
+            {
+              "label": {
+                "en": "Open project",
+                "zh": "打开项目"
+              },
+              "url": "https://xinshen-robynn.github.io/iml300/HyperNarrative/Page1.html"
+            }
+          ]
         },
         {
           "id": "dj-mixer",
@@ -533,8 +560,8 @@
             "zh": "一个把声音变成纹理的互动调音台。在面板内移动红色圆点，改变低频均衡与共振，同时让半色调图案的大小与密度发生变化，在声音与图像之间进行“搓碟”。"
           },
           "role": {
-            "en": "Interaction Designer / Creative Coder",
-            "zh": "交互设计师 / 创意编程"
+            "en": "Creator / Developer",
+            "zh": "开发者"
           },
           "url": "https://editor.p5js.org/xinshen/sketches/1HopXRJGm",
           "demo": {
@@ -545,48 +572,20 @@
               "zh": "DJ Panel Halftone Mixer 操作演示"
             }
           },
-          "section": "vibecoding"
-        },
-        {
-          "id": "pokemon-card-mr-experience",
-          "sourceFolder": "Visual Reality",
-          "client": "POKÉMON CARD MIXED REALITY EXPERIENCE",
-          "title": {
-            "en": "Pokémon Card Mixed Reality Experience",
-            "zh": "宝可梦卡牌混合现实体验"
+          "section": "vibecoding",
+          "metrics": {
+            "en": "",
+            "zh": ""
           },
-          "date": {
-            "en": "August 2026",
-            "zh": "2026 年 8 月"
-          },
-          "discipline": {
-            "en": "Mixed reality game",
-            "zh": "混合现实游戏"
-          },
-          "description": {
-            "en": "A Unity-based mixed reality game built with image tracking for Quest 3. The experience recognizes ten physical Pokémon cards in real time and brings their characters and interactions into the player’s surroundings.",
-            "zh": "一款通过 Image Tracking 技术搭建的 Unity 混合现实游戏。在 Quest 3 中实时识别 10 张实体宝可梦卡牌，让卡牌角色与互动进入玩家所在的现实空间。"
-          },
-          "role": {
-            "en": "Creator / Card Designer / System Developer",
-            "zh": "创作者 / 卡牌定制 / 系统搭建"
-          },
-          "rows": [
-            [
-              "assets/pokemon-card-mr-experience/image-01.webp"
-            ]
-          ],
-          "videos": [
+          "links": [
             {
-              "src": "assets/pokemon-card-mr-experience/video-01.mp4",
-              "poster": "assets/pokemon-card-mr-experience/video-01.webp",
-              "title": {
-                "en": "Pokémon card tracking demo",
-                "zh": "宝可梦卡牌追踪演示"
-              }
+              "label": {
+                "en": "Open project",
+                "zh": "打开项目"
+              },
+              "url": "https://editor.p5js.org/xinshen/sketches/1HopXRJGm"
             }
-          ],
-          "section": "mixed-reality"
+          ]
         }
       ]
     },
@@ -606,8 +605,8 @@
             "zh": "艺人现场演出"
           },
           "date": {
-            "en": "",
-            "zh": ""
+            "en": "February 2025",
+            "zh": "2025 年 2 月"
           },
           "discipline": {
             "en": "Photography series",
@@ -625,15 +624,16 @@
           "gallery": [
             "assets/photography/live-event/image-03.webp",
             "assets/photography/live-event/image-02.webp",
-            "assets/photography/live-event/image-01.webp",
-            "assets/photography/live-event/image-04.webp"
+            "assets/photography/live-event/image-04.webp",
+            "assets/photography/live-event/image-01.webp"
           ],
           "section": "photography",
           "metrics": {
             "en": "",
             "zh": ""
           },
-          "links": []
+          "links": [],
+          "galleryLayout": "first-pair"
         },
         {
           "id": "photography-madness",
@@ -642,8 +642,8 @@
             "zh": "Madness"
           },
           "date": {
-            "en": "",
-            "zh": ""
+            "en": "January 2025",
+            "zh": "2025 年 1 月"
           },
           "discipline": {
             "en": "Photography series",
@@ -678,7 +678,8 @@
               },
               "url": "https://issuu.com/descent_usc/docs/issue_8_adrenaline"
             }
-          ]
+          ],
+          "galleryLayout": "first-third-pair"
         },
         {
           "id": "photography-soaked",
@@ -687,8 +688,8 @@
             "zh": "Soaked"
           },
           "date": {
-            "en": "",
-            "zh": ""
+            "en": "January 2025",
+            "zh": "2025 年 1 月"
           },
           "discipline": {
             "en": "Photography series",
@@ -722,8 +723,8 @@
             "zh": "SuperBloom"
           },
           "date": {
-            "en": "",
-            "zh": ""
+            "en": "September 2025",
+            "zh": "2025 年 9 月"
           },
           "discipline": {
             "en": "Photography series",
@@ -759,8 +760,8 @@
             "zh": "The Dust Remembers"
           },
           "date": {
-            "en": "",
-            "zh": ""
+            "en": "May 2025",
+            "zh": "2025 年 5 月"
           },
           "discipline": {
             "en": "Photography series",
@@ -786,7 +787,8 @@
             "en": "",
             "zh": ""
           },
-          "links": []
+          "links": [],
+          "galleryLayout": "middle-pair"
         }
       ]
     },
@@ -1118,7 +1120,55 @@
         "VR",
         "vr"
       ],
-      "projects": []
+      "projects": [
+        {
+          "id": "pokemon-card-mr-experience",
+          "sourceFolder": "Visual Reality",
+          "client": "POKÉMON CARD MIXED REALITY EXPERIENCE",
+          "title": {
+            "en": "Pokémon Card Mixed Reality Experience",
+            "zh": "宝可梦卡牌混合现实体验"
+          },
+          "date": {
+            "en": "August 2026",
+            "zh": "2026 年 8 月"
+          },
+          "discipline": {
+            "en": "Mixed reality game",
+            "zh": "混合现实游戏"
+          },
+          "description": {
+            "en": "A Unity-based mixed reality game built with image tracking for Quest 3. The experience recognizes ten physical Pokémon cards in real time and brings their characters and interactions into the player’s surroundings.",
+            "zh": "一款通过 Image Tracking 技术搭建的 Unity 混合现实游戏。在 Quest 3 中实时识别 10 张实体宝可梦卡牌，让卡牌角色与互动进入玩家所在的现实空间。"
+          },
+          "role": {
+            "en": "Creator / System Developer",
+            "zh": "开发者"
+          },
+          "rows": [
+            [
+              "assets/pokemon-card-mr-experience/image-01.webp"
+            ]
+          ],
+          "videos": [
+            {
+              "src": "assets/pokemon-card-mr-experience/video-01.mp4",
+              "poster": "assets/pokemon-card-mr-experience/video-01.webp",
+              "title": {
+                "en": "Pokémon card tracking demo",
+                "zh": "宝可梦卡牌追踪演示"
+              }
+            }
+          ],
+          "section": "mixed-reality",
+          "cover": "assets/pokemon-card-mr-experience/image-01.webp",
+          "metrics": {
+            "en": "",
+            "zh": ""
+          },
+          "links": []
+        }
+      ]
     }
   ],
   "pages": {
@@ -1126,8 +1176,8 @@
     "portrait": "assets/pages/portrait.webp",
     "tagline": "To unfold a polyhedron",
     "bio": {
-      "en": "I’m Xin (Robynn) Shen. My practice moves between creative direction, photography and interactive experiences. From fashion imagery and cultural storytelling to experiments with sound and the browser, I explore how images, narratives and participation can shape one another. This portfolio brings together different facets of that practice.",
-      "zh": "我是 Xin (Robynn) Shen。我的创作横跨创意指导、摄影与互动体验，从时尚影像、文化叙事，到声音与浏览器中的互动实验，探索图像、故事与参与方式如何彼此影响。这份作品集呈现了我创作实践中的不同切面。"
+      "en": "I’m Xin (Robynn) Shen. I work in photography and creative direction, and I also like experimenting with sound, code, and interaction. Sometimes it starts with a camera, sometimes with an idea, and sometimes with me wondering, “what if I try this?” This is where those experiments end up.",
+      "zh": "我是沈芯 Robynn。我的创作会在摄影、创意指导和互动媒体之间切换，也常常顺着兴趣碰到文化、声音和代码。\n有时候从一台相机开始，有时候从一个想法开始，也有时候只是因为我突然想：“这个要不试试看？”\n这里就是这些尝试最后聚在一起的地方。"
     },
     "links": [
       {
