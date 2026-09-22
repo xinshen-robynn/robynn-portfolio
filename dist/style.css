@@ -70,3 +70,14 @@ body[data-page=home] .home-intro h1{font-size:clamp(40px,10vw,64px);margin-top:8
 .photo-slide.photo-pair{--pair-height:min(100cqh,calc((100cqw - 10px)/var(--pair-ratio)));gap:10px}
 .photo-pair figure{flex:none;height:var(--pair-height);width:calc(var(--pair-height) * var(--photo-ratio))}
 .photo-pair img{width:100%;height:100%;object-fit:contain}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:110ms ease-in both portfolio-fade-out}
+::view-transition-new(root){animation:180ms ease-out both portfolio-fade-in}
+@keyframes portfolio-fade-out{to{opacity:0}}
+@keyframes portfolio-fade-in{from{opacity:0}to{opacity:1}}
+.project-card figure,.poster-grid figure{background:#f1f1f1}
+.project-card figure.is-loading,.poster-grid figure.is-loading{background:linear-gradient(110deg,#f1f1f1 15%,#fafafa 45%,#f1f1f1 75%);background-size:200% 100%;animation:card-loading 1.4s linear infinite}
+.project-card img{transition:transform .32s ease}
+.project-card:hover img,.project-card:focus-visible img{transform:scale(1.025)}
+@keyframes card-loading{to{background-position-x:-200%}}
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}.project-card figure.is-loading,.poster-grid figure.is-loading{animation:none}.project-card img{transition:none}}

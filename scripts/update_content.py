@@ -26,7 +26,7 @@ def public_data(value):
 
 
 def build(data):
-    from PIL import Image
+    from PIL import Image, ImageOps
     target = ROOT / 'dist/projects.js'
     output = public_data(data)
     def add_video_formats(value):
@@ -41,6 +41,27 @@ def build(data):
             for child in value:
                 add_video_formats(child)
     add_video_formats(output)
+    # Listing cards need only a small image. Keep their source images intact for detail pages.
+    covers = {p.get('cover') for category in data['categories'] for p in category['projects']}
+    covers.update(card.get('cover') for card in data.get('categoryCards', {}).values())
+    covers.discard(None)
+    output['thumbnails'] = {}
+    thumbnail_dir = ROOT / 'dist/assets/thumbs'
+    thumbnail_dir.mkdir(parents=True, exist_ok=True)
+    for source in sorted(covers):
+        if not isinstance(source, str) or not source.startswith('assets/'):
+            continue
+        original = ROOT / 'dist' / source
+        if not original.is_file():
+            continue
+        fingerprint = hashlib.sha256(original.read_bytes()).hexdigest()[:16]
+        destination = thumbnail_dir / f'{fingerprint}.webp'
+        if not destination.exists():
+            with Image.open(original) as image:
+                image = ImageOps.exif_transpose(image).convert('RGB')
+                image.thumbnail((960, 720), Image.Resampling.LANCZOS)
+                image.save(destination, 'WEBP', quality=78, method=6)
+        output['thumbnails'][source] = str(destination.relative_to(ROOT / 'dist'))
     output['dimensions'] = {}
     for image_path in (ROOT / 'dist/assets').rglob('*.webp'):
         with Image.open(image_path) as image:
