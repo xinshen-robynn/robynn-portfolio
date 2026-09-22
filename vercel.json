@@ -6,6 +6,10 @@
   "trailingSlash": false,
   "headers": [
     {
+      "source": "/:asset(app.js|projects.js|style.css)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
       "source": "/assets/thumbs/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }

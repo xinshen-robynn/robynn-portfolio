@@ -60,6 +60,8 @@ renderMedia=function(){baseRenderMedia();if(mediaMode==='images'){const pages=pi
 const baseInitPhotographySlides=initPhotographySlides;
 initPhotographySlides=function(){baseInitPhotographySlides();document.querySelectorAll('[data-photo-slider]').forEach(slider=>{const warm=()=>{const slides=[...slider.querySelectorAll('[data-photo-slide]')],active=slides.findIndex(slide=>slide.classList.contains('is-active'));preloadImages([...(slides[active-1]?.querySelectorAll('img')||[]),...(slides[active+1]?.querySelectorAll('img')||[])].map(image=>image.currentSrc||image.src))};warm();slider.addEventListener('click',warm);slider.addEventListener('pointerup',warm)})};
 const prefetchedPages=new Set;
+const usesCleanUrls=location.hostname.endsWith('.vercel.app')||['xinshen.space','www.xinshen.space'].includes(location.hostname);
+function canonicalPath(path){return usesCleanUrls?path.replace(/\/index\.html$/,'/').replace(/\.html$/,''):path}
 function assetsForPage(id){
   const group=groups.find(g=>g.id===id);
   if(group)return group.children.map(child=>{const first=groupProjects(child.id)[0];return first&&coverThumbnail(PORTFOLIO.categoryCards[child.id]?.cover||cover(first))}).filter(Boolean);
@@ -73,14 +75,16 @@ function assetsForPage(id){
 }
 function prefetchLink(anchor){
   const target=new URL(anchor.href,location.href);
-  if(target.origin!==location.origin||!target.pathname.endsWith('.html')||target.pathname===location.pathname||prefetchedPages.has(target.pathname))return;
+  if(target.origin!==location.origin||(!target.pathname.endsWith('.html')&&!usesCleanUrls)||canonicalPath(target.pathname)===canonicalPath(location.pathname)||prefetchedPages.has(target.pathname))return;
   prefetchedPages.add(target.pathname);
   const hint=document.createElement('link');hint.rel='prefetch';hint.href=target.pathname;document.head.append(hint);
-  preloadImages(assetsForPage(target.pathname.split('/').pop().replace(/\.html$/,'').replace(/^index$/,'home')));
+  preloadImages(assetsForPage(target.pathname.split('/').pop().replace(/\.html$/,'').replace(/^index$/,'home')||'home'));
 }
 document.addEventListener('pointerover',event=>{const anchor=event.target.closest('a[href]');if(anchor&&event.pointerType!=='touch')prefetchLink(anchor)});
 document.addEventListener('focusin',event=>{const anchor=event.target.closest('a[href]');if(anchor)prefetchLink(anchor)});
 document.addEventListener('touchstart',event=>{const anchor=event.target.closest('a[href]');if(anchor)prefetchLink(anchor)},{passive:true});
 const baseRender=render;
-render=function(){baseRender();document.querySelectorAll('.project-card figure,.poster-grid figure').forEach(figure=>{const image=figure.querySelector('img');if(!image||image.complete)return;figure.classList.add('is-loading');const done=()=>figure.classList.remove('is-loading');image.addEventListener('load',done,{once:true});image.addEventListener('error',done,{once:true})})};
+function normalizeLinks(){if(usesCleanUrls)document.querySelectorAll('a[href]').forEach(anchor=>{const url=new URL(anchor.href);if(url.origin===location.origin&&url.pathname.endsWith('.html')){url.pathname=canonicalPath(url.pathname);anchor.href=url.href}})}
+render=function(){baseRender();normalizeLinks();document.querySelectorAll('.project-card figure,.poster-grid figure').forEach(figure=>{const image=figure.querySelector('img');if(!image||image.complete)return;figure.classList.add('is-loading');const done=()=>figure.classList.remove('is-loading');image.addEventListener('load',done,{once:true});image.addEventListener('error',done,{once:true})})};
+document.querySelector('#navigation').addEventListener('click',normalizeLinks);
 render();
