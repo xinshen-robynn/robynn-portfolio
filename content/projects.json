@@ -620,12 +620,12 @@
             "en": "Photographer",
             "zh": "摄影师"
           },
-          "cover": "assets/photography/live-event/image-01.webp",
+          "cover": "assets/optimized/photography/live-event/image-01.webp",
           "gallery": [
-            "assets/photography/live-event/image-03.webp",
-            "assets/photography/live-event/image-02.webp",
-            "assets/photography/live-event/image-04.webp",
-            "assets/photography/live-event/image-01.webp"
+            "assets/optimized/photography/live-event/image-03.webp",
+            "assets/optimized/photography/live-event/image-02.webp",
+            "assets/optimized/photography/live-event/image-04.webp",
+            "assets/optimized/photography/live-event/image-01.webp"
           ],
           "section": "photography",
           "metrics": {
@@ -657,12 +657,12 @@
             "en": "Photographer",
             "zh": "摄影师"
           },
-          "cover": "assets/photography/madness/image-01.webp",
+          "cover": "assets/optimized/photography/madness/image-01.webp",
           "gallery": [
-            "assets/photography/madness/image-03.webp",
-            "assets/photography/madness/image-02.webp",
-            "assets/photography/madness/image-01.webp",
-            "assets/photography/madness/image-04.webp"
+            "assets/optimized/photography/madness/image-03.webp",
+            "assets/optimized/photography/madness/image-02.webp",
+            "assets/optimized/photography/madness/image-01.webp",
+            "assets/optimized/photography/madness/image-04.webp"
           ],
           "section": "photography",
           "slideshowMode": "single",
@@ -703,11 +703,11 @@
             "en": "Photographer",
             "zh": "摄影师"
           },
-          "cover": "assets/photography/soaked/image-01.webp",
+          "cover": "assets/optimized/photography/soaked/image-01.webp",
           "gallery": [
-            "assets/photography/soaked/image-01.webp",
-            "assets/photography/soaked/image-02.webp",
-            "assets/photography/soaked/image-03.webp"
+            "assets/optimized/photography/soaked/image-01.webp",
+            "assets/optimized/photography/soaked/image-02.webp",
+            "assets/optimized/photography/soaked/image-03.webp"
           ],
           "section": "photography",
           "metrics": {
@@ -738,13 +738,13 @@
             "en": "Photographer",
             "zh": "摄影师"
           },
-          "cover": "assets/photography/superbloom/image-01.webp",
+          "cover": "assets/optimized/photography/superbloom/image-01.webp",
           "gallery": [
-            "assets/photography/superbloom/image-01.webp",
-            "assets/photography/superbloom/image-02.webp",
-            "assets/photography/superbloom/image-03.webp",
-            "assets/photography/superbloom/image-04.webp",
-            "assets/photography/superbloom/image-05.webp"
+            "assets/optimized/photography/superbloom/image-01.webp",
+            "assets/optimized/photography/superbloom/image-02.webp",
+            "assets/optimized/photography/superbloom/image-03.webp",
+            "assets/optimized/photography/superbloom/image-04.webp",
+            "assets/optimized/photography/superbloom/image-05.webp"
           ],
           "section": "photography",
           "metrics": {
@@ -775,12 +775,12 @@
             "en": "Photographer",
             "zh": "摄影师"
           },
-          "cover": "assets/photography/the-dust-remembers/image-01.webp",
+          "cover": "assets/optimized/photography/the-dust-remembers/image-01.webp",
           "gallery": [
-            "assets/photography/the-dust-remembers/image-01.webp",
-            "assets/photography/the-dust-remembers/image-02.webp",
-            "assets/photography/the-dust-remembers/image-03.webp",
-            "assets/photography/the-dust-remembers/image-04.webp"
+            "assets/optimized/photography/the-dust-remembers/image-01.webp",
+            "assets/optimized/photography/the-dust-remembers/image-02.webp",
+            "assets/optimized/photography/the-dust-remembers/image-03.webp",
+            "assets/optimized/photography/the-dust-remembers/image-04.webp"
           ],
           "section": "photography",
           "metrics": {
@@ -1214,10 +1214,10 @@
           "zh": "Live Event"
         },
         "images": [
-          "assets/photography/live-event/image-01.webp",
-          "assets/photography/live-event/image-02.webp",
-          "assets/photography/live-event/image-03.webp",
-          "assets/photography/live-event/image-04.webp"
+          "assets/optimized/photography/live-event/image-01.webp",
+          "assets/optimized/photography/live-event/image-02.webp",
+          "assets/optimized/photography/live-event/image-03.webp",
+          "assets/optimized/photography/live-event/image-04.webp"
         ]
       },
       {
@@ -1227,10 +1227,10 @@
           "zh": "Madness"
         },
         "images": [
-          "assets/photography/madness/image-01.webp",
-          "assets/photography/madness/image-02.webp",
-          "assets/photography/madness/image-03.webp",
-          "assets/photography/madness/image-04.webp"
+          "assets/optimized/photography/madness/image-01.webp",
+          "assets/optimized/photography/madness/image-02.webp",
+          "assets/optimized/photography/madness/image-03.webp",
+          "assets/optimized/photography/madness/image-04.webp"
         ]
       },
       {
@@ -1240,9 +1240,9 @@
           "zh": "Soaked"
         },
         "images": [
-          "assets/photography/soaked/image-01.webp",
-          "assets/photography/soaked/image-02.webp",
-          "assets/photography/soaked/image-03.webp"
+          "assets/optimized/photography/soaked/image-01.webp",
+          "assets/optimized/photography/soaked/image-02.webp",
+          "assets/optimized/photography/soaked/image-03.webp"
         ]
       },
       {
@@ -1252,11 +1252,11 @@
           "zh": "SuperBloom"
         },
         "images": [
-          "assets/photography/superbloom/image-01.webp",
-          "assets/photography/superbloom/image-02.webp",
-          "assets/photography/superbloom/image-03.webp",
-          "assets/photography/superbloom/image-04.webp",
-          "assets/photography/superbloom/image-05.webp"
+          "assets/optimized/photography/superbloom/image-01.webp",
+          "assets/optimized/photography/superbloom/image-02.webp",
+          "assets/optimized/photography/superbloom/image-03.webp",
+          "assets/optimized/photography/superbloom/image-04.webp",
+          "assets/optimized/photography/superbloom/image-05.webp"
         ]
       },
       {
@@ -1266,10 +1266,10 @@
           "zh": "The Dust Remembers"
         },
         "images": [
-          "assets/photography/the-dust-remembers/image-01.webp",
-          "assets/photography/the-dust-remembers/image-02.webp",
-          "assets/photography/the-dust-remembers/image-03.webp",
-          "assets/photography/the-dust-remembers/image-04.webp"
+          "assets/optimized/photography/the-dust-remembers/image-01.webp",
+          "assets/optimized/photography/the-dust-remembers/image-02.webp",
+          "assets/optimized/photography/the-dust-remembers/image-03.webp",
+          "assets/optimized/photography/the-dust-remembers/image-04.webp"
         ]
       }
     ]
@@ -1445,7 +1445,7 @@
         "en": "Photographer",
         "zh": "摄影师"
       },
-      "cover": "assets/photography/live-event/image-01.webp"
+      "cover": "assets/optimized/photography/live-event/image-01.webp"
     },
     "poster": {
       "role": {
